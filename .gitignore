@@ -1,0 +1,49 @@
+# Lista de permitidos (deny-by-default): este repo es solo lo que la app de
+# Streamlit necesita para correr (ver scripts/datos_observatorio.py) mas el
+# codigo y la documentacion de diseno. Los microdatos crudos DANE (~3.4 GB,
+# GEIH/2023-2026/*.zip, GEIH/pobreza/) y los intermedios a grano de hogar
+# (GEIH/procesado_nacional/vivienda_23ciudades_*.csv, GEIH/procesado/) quedan
+# fuera deliberadamente: se regeneran con script_observatorio_nacional.py, no
+# se versionan.
+*
+
+!.gitignore
+!requirements.txt
+!README.md
+!CONTEXT.md
+!app.py
+
+!.streamlit/
+!.streamlit/config.toml
+
+!pages/
+!pages/*.py
+
+!scripts/
+!scripts/datos_observatorio.py
+!scripts/config_ciudades.py
+!scripts/30_generar_fichas_ciudades.py
+
+!docs/
+!docs/adr/
+!docs/adr/*.md
+
+!output/
+!output/observatorio_vivienda_capitales_2023_2026.csv
+!output/observatorio_vivienda_capitales_2023_2026.xlsx
+!output/auditoria_estadistica_observatorio_nacional.xlsx
+!output/metodologia_observatorio_nacional.md
+
+!GEIH/
+!GEIH/control_geografico_23_ciudades.csv
+!GEIH/procesado_nacional/
+!GEIH/procesado_nacional/rankings_nacionales.csv
+!GEIH/procesado_nacional/validacion_poblacion_cnpv.csv
+!GEIH/procesado_nacional/validacion_temporal_nacional.csv
+!GEIH/procesado_nacional/auditoria_red_team_nacional.csv
+
+!fichas_ciudades/
+!fichas_ciudades/*.md
+
+!specs/
+!specs/**

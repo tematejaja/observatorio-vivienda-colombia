@@ -1,0 +1,93 @@
+ciudad_nombre,anio,n_meses,personas_expandidas_geih,proyeccion_cabecera_am,proyeccion_cabecera_nucleo,dif_pct_am,dif_pct_nucleo,estado_poblacional,observacion
+Bogotá D.C.,2023,12,7936562.0,7854783.0,7854783.0,1.04,1.04,DENTRO_TOLERANCIA,
+Bogotá D.C.,2024,12,8002281.0,7888813.0,7888813.0,1.44,1.44,DENTRO_TOLERANCIA,
+Bogotá D.C.,2025,12,8068215.0,7912359.0,7912359.0,1.97,1.97,DENTRO_TOLERANCIA,
+Bogotá D.C.,2026,6,8117869.0,7914911.0,7914911.0,2.56,2.56,DENTRO_TOLERANCIA,
+Medellín A.M.,2023,12,4054998.0,3900923.0,2469958.0,3.95,64.17,DENTRO_TOLERANCIA,
+Medellín A.M.,2024,12,4126505.0,3930427.0,2476134.0,4.99,66.65,DENTRO_TOLERANCIA,
+Medellín A.M.,2025,12,4196366.0,3955810.0,2479683.0,6.08,69.23,REVISAR,"Desvio +6.1% frente a la proyeccion del dominio. Contra municipio nucleo solo: +69.2%. Puede deberse a la definicion de A.M. (ver caveat del script), no necesariamente a un filtro geografico erroneo."
+Medellín A.M.,2026,6,4246073.0,3973165.0,2478217.0,6.87,71.34,REVISAR,"Desvio +6.9% frente a la proyeccion del dominio. Contra municipio nucleo solo: +71.3%. Puede deberse a la definicion de A.M. (ver caveat del script), no necesariamente a un filtro geografico erroneo."
+Cali A.M.,2023,12,2348484.0,2325407.0,2227822.0,0.99,5.42,DENTRO_TOLERANCIA,
+Cali A.M.,2024,12,2368671.0,2325572.0,2227444.0,1.85,6.34,DENTRO_TOLERANCIA,
+Cali A.M.,2025,12,2390446.0,2323097.0,2224562.0,2.9,7.46,DENTRO_TOLERANCIA,
+Cali A.M.,2026,6,2407260.0,2316120.0,2217353.0,3.94,8.56,DENTRO_TOLERANCIA,
+Barranquilla A.M.,2023,12,2018477.0,1972389.0,1276498.0,2.34,58.13,DENTRO_TOLERANCIA,
+Barranquilla A.M.,2024,12,2039666.0,1987599.0,1278419.0,2.62,59.55,DENTRO_TOLERANCIA,
+Barranquilla A.M.,2025,12,2060202.0,2000421.0,1278651.0,2.99,61.12,DENTRO_TOLERANCIA,
+Barranquilla A.M.,2026,6,2075137.0,2007705.0,1275180.0,3.36,62.73,DENTRO_TOLERANCIA,
+Bucaramanga A.M.,2023,12,1230604.0,1207329.0,602080.0,1.93,104.39,DENTRO_TOLERANCIA,
+Bucaramanga A.M.,2024,12,1241745.0,1215301.0,604881.0,2.18,105.29,DENTRO_TOLERANCIA,
+Bucaramanga A.M.,2025,12,1252909.0,1222019.0,607060.0,2.53,106.39,DENTRO_TOLERANCIA,
+Bucaramanga A.M.,2026,6,1261017.0,1226151.0,607951.0,2.84,107.42,DENTRO_TOLERANCIA,
+Manizales A.M.,2023,12,495584.0,499104.0,436099.0,-0.71,13.64,DENTRO_TOLERANCIA,
+Manizales A.M.,2024,12,502059.0,505412.0,441288.0,-0.66,13.77,DENTRO_TOLERANCIA,
+Manizales A.M.,2025,12,508566.0,511105.0,445953.0,-0.5,14.04,DENTRO_TOLERANCIA,
+Manizales A.M.,2026,6,513211.0,515887.0,449879.0,-0.52,14.08,DENTRO_TOLERANCIA,
+Pereira A.M.,2023,12,662239.0,657140.0,404531.0,0.78,63.71,DENTRO_TOLERANCIA,
+Pereira A.M.,2024,12,670141.0,663119.0,406831.0,1.06,64.72,DENTRO_TOLERANCIA,
+Pereira A.M.,2025,12,677690.0,668314.0,408608.0,1.4,65.85,DENTRO_TOLERANCIA,
+Pereira A.M.,2026,6,683018.0,672393.0,409683.0,1.58,66.72,DENTRO_TOLERANCIA,
+Cúcuta A.M.,2023,12,1002223.0,1001237.0,757159.0,0.1,32.37,DENTRO_TOLERANCIA,
+Cúcuta A.M.,2024,12,1006940.0,1008020.0,760344.0,-0.11,32.43,DENTRO_TOLERANCIA,
+Cúcuta A.M.,2025,12,1011391.0,1013148.0,762256.0,-0.17,32.68,DENTRO_TOLERANCIA,
+Cúcuta A.M.,2026,6,1014600.0,1014180.0,761043.0,0.04,33.32,DENTRO_TOLERANCIA,
+Ibagué,2023,12,506551.0,508954.0,508954.0,-0.47,-0.47,DENTRO_TOLERANCIA,
+Ibagué,2024,12,508668.0,512022.0,512022.0,-0.66,-0.66,DENTRO_TOLERANCIA,
+Ibagué,2025,12,510923.0,514685.0,514685.0,-0.73,-0.73,DENTRO_TOLERANCIA,
+Ibagué,2026,6,512560.0,516862.0,516862.0,-0.83,-0.83,DENTRO_TOLERANCIA,
+Pasto,2023,12,306195.0,313894.0,313894.0,-2.45,-2.45,DENTRO_TOLERANCIA,
+Pasto,2024,12,306829.0,314869.0,314869.0,-2.55,-2.55,DENTRO_TOLERANCIA,
+Pasto,2025,12,307648.0,315662.0,315662.0,-2.54,-2.54,DENTRO_TOLERANCIA,
+Pasto,2026,6,308342.0,316257.0,316257.0,-2.5,-2.5,DENTRO_TOLERANCIA,
+Villavicencio,2023,12,513606.0,528106.0,528106.0,-2.75,-2.75,DENTRO_TOLERANCIA,
+Villavicencio,2024,12,516981.0,533088.0,533088.0,-3.02,-3.02,DENTRO_TOLERANCIA,
+Villavicencio,2025,12,520151.0,537605.0,537605.0,-3.25,-3.25,DENTRO_TOLERANCIA,
+Villavicencio,2026,6,522465.0,541221.0,541221.0,-3.47,-3.47,DENTRO_TOLERANCIA,
+Montería,2023,12,402037.0,433199.0,433199.0,-7.19,-7.19,REVISAR,"Desvio -7.2% frente a la proyeccion del dominio. Contra municipio nucleo solo: -7.2%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Montería,2024,12,403459.0,441790.0,441790.0,-8.68,-8.68,REVISAR,"Desvio -8.7% frente a la proyeccion del dominio. Contra municipio nucleo solo: -8.7%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Montería,2025,12,404684.0,450188.0,450188.0,-10.11,-10.11,REVISAR,"Desvio -10.1% frente a la proyeccion del dominio. Contra municipio nucleo solo: -10.1%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Montería,2026,6,405605.0,458206.0,458206.0,-11.48,-11.48,REVISAR,"Desvio -11.5% frente a la proyeccion del dominio. Contra municipio nucleo solo: -11.5%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Cartagena,2023,12,943413.0,903072.0,903072.0,4.47,4.47,DENTRO_TOLERANCIA,
+Cartagena,2024,12,950011.0,903895.0,903895.0,5.1,5.1,REVISAR,"Desvio +5.1% frente a la proyeccion del dominio. Contra municipio nucleo solo: +5.1%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Cartagena,2025,12,956023.0,903881.0,903881.0,5.77,5.77,REVISAR,"Desvio +5.8% frente a la proyeccion del dominio. Contra municipio nucleo solo: +5.8%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Cartagena,2026,6,960450.0,902411.0,902411.0,6.43,6.43,REVISAR,"Desvio +6.4% frente a la proyeccion del dominio. Contra municipio nucleo solo: +6.4%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Neiva,2023,12,348311.0,365394.0,365394.0,-4.68,-4.68,DENTRO_TOLERANCIA,
+Neiva,2024,12,350197.0,371176.0,371176.0,-5.65,-5.65,REVISAR,"Desvio -5.7% frente a la proyeccion del dominio. Contra municipio nucleo solo: -5.7%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Neiva,2025,12,351880.0,376767.0,376767.0,-6.61,-6.61,REVISAR,"Desvio -6.6% frente a la proyeccion del dominio. Contra municipio nucleo solo: -6.6%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Neiva,2026,6,353109.0,382081.0,382081.0,-7.58,-7.58,REVISAR,"Desvio -7.6% frente a la proyeccion del dominio. Contra municipio nucleo solo: -7.6%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Armenia,2023,12,309019.0,296198.0,296198.0,4.33,4.33,DENTRO_TOLERANCIA,
+Armenia,2024,12,313116.0,297493.0,297493.0,5.25,5.25,REVISAR,"Desvio +5.3% frente a la proyeccion del dominio. Contra municipio nucleo solo: +5.3%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Armenia,2025,12,316831.0,298425.0,298425.0,6.17,6.17,REVISAR,"Desvio +6.2% frente a la proyeccion del dominio. Contra municipio nucleo solo: +6.2%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Armenia,2026,6,319440.0,298815.0,298815.0,6.9,6.9,REVISAR,"Desvio +6.9% frente a la proyeccion del dominio. Contra municipio nucleo solo: +6.9%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Santa Marta,2023,12,498858.0,508115.0,508115.0,-1.82,-1.82,DENTRO_TOLERANCIA,
+Santa Marta,2024,12,502310.0,515343.0,515343.0,-2.53,-2.53,DENTRO_TOLERANCIA,
+Santa Marta,2025,12,505668.0,521897.0,521897.0,-3.11,-3.11,DENTRO_TOLERANCIA,
+Santa Marta,2026,6,508270.0,526978.0,526978.0,-3.55,-3.55,DENTRO_TOLERANCIA,
+Sincelejo,2023,12,267438.0,278938.0,278938.0,-4.12,-4.12,DENTRO_TOLERANCIA,
+Sincelejo,2024,12,269178.0,284215.0,284215.0,-5.29,-5.29,REVISAR,"Desvio -5.3% frente a la proyeccion del dominio. Contra municipio nucleo solo: -5.3%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Sincelejo,2025,12,270690.0,289318.0,289318.0,-6.44,-6.44,REVISAR,"Desvio -6.4% frente a la proyeccion del dominio. Contra municipio nucleo solo: -6.4%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Sincelejo,2026,6,271767.0,294007.0,294007.0,-7.56,-7.56,REVISAR,"Desvio -7.6% frente a la proyeccion del dominio. Contra municipio nucleo solo: -7.6%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Valledupar,2023,12,490699.0,514277.0,514277.0,-4.58,-4.58,DENTRO_TOLERANCIA,
+Valledupar,2024,12,496426.0,527636.0,527636.0,-5.92,-5.92,REVISAR,"Desvio -5.9% frente a la proyeccion del dominio. Contra municipio nucleo solo: -5.9%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Valledupar,2025,12,502107.0,540530.0,540530.0,-7.11,-7.11,REVISAR,"Desvio -7.1% frente a la proyeccion del dominio. Contra municipio nucleo solo: -7.1%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Valledupar,2026,6,506280.0,552094.0,552094.0,-8.3,-8.3,REVISAR,"Desvio -8.3% frente a la proyeccion del dominio. Contra municipio nucleo solo: -8.3%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Popayán,2023,12,272948.0,283978.0,283978.0,-3.88,-3.88,DENTRO_TOLERANCIA,
+Popayán,2024,12,273851.0,286806.0,286806.0,-4.52,-4.52,DENTRO_TOLERANCIA,
+Popayán,2025,12,274311.0,289308.0,289308.0,-5.18,-5.18,REVISAR,"Desvio -5.2% frente a la proyeccion del dominio. Contra municipio nucleo solo: -5.2%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Popayán,2026,6,274620.0,291391.0,291391.0,-5.76,-5.76,REVISAR,"Desvio -5.8% frente a la proyeccion del dominio. Contra municipio nucleo solo: -5.8%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Tunja,2023,12,175200.0,177672.0,177672.0,-1.39,-1.39,DENTRO_TOLERANCIA,
+Tunja,2024,12,177129.0,179666.0,179666.0,-1.41,-1.41,DENTRO_TOLERANCIA,
+Tunja,2025,12,179215.0,181551.0,181551.0,-1.29,-1.29,DENTRO_TOLERANCIA,
+Tunja,2026,6,180727.0,183278.0,183278.0,-1.39,-1.39,DENTRO_TOLERANCIA,
+Riohacha,2023,12,156050.0,149689.0,149689.0,4.25,4.25,DENTRO_TOLERANCIA,
+Riohacha,2024,12,158584.0,151834.0,151834.0,4.45,4.45,DENTRO_TOLERANCIA,
+Riohacha,2025,12,161092.0,153756.0,153756.0,4.77,4.77,DENTRO_TOLERANCIA,
+Riohacha,2026,6,162896.0,155181.0,155181.0,4.97,4.97,DENTRO_TOLERANCIA,
+Florencia,2023,12,157932.0,159628.0,159628.0,-1.06,-1.06,DENTRO_TOLERANCIA,
+Florencia,2024,12,159815.0,161733.0,161733.0,-1.19,-1.19,DENTRO_TOLERANCIA,
+Florencia,2025,12,161599.0,163675.0,163675.0,-1.27,-1.27,DENTRO_TOLERANCIA,
+Florencia,2026,6,162899.0,165420.0,165420.0,-1.52,-1.52,DENTRO_TOLERANCIA,
+Quibdó,2023,12,114551.0,119144.0,119144.0,-3.86,-3.86,DENTRO_TOLERANCIA,
+Quibdó,2024,12,114650.0,120397.0,120397.0,-4.77,-4.77,DENTRO_TOLERANCIA,
+Quibdó,2025,12,114554.0,121595.0,121595.0,-5.79,-5.79,REVISAR,"Desvio -5.8% frente a la proyeccion del dominio. Contra municipio nucleo solo: -5.8%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."
+Quibdó,2026,6,114514.0,122692.0,122692.0,-6.67,-6.67,REVISAR,"Desvio -6.7% frente a la proyeccion del dominio. Contra municipio nucleo solo: -6.7%. Ciudad sin A.M.: correspondencia 1:1 municipio<->dominio, revisar filtro geografico."

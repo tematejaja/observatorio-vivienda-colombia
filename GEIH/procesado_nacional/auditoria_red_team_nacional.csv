@@ -1,0 +1,491 @@
+tipo_prueba,ciudad_nombre,anio,indicador,resultado,evidencia
+SUMA_TENENCIA,Armenia,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Armenia,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Armenia,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Armenia,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Barranquilla A.M.,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Barranquilla A.M.,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Barranquilla A.M.,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Barranquilla A.M.,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Bogotá D.C.,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Bogotá D.C.,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Bogotá D.C.,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Bogotá D.C.,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Bucaramanga A.M.,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Bucaramanga A.M.,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Bucaramanga A.M.,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Bucaramanga A.M.,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cali A.M.,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cali A.M.,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cali A.M.,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cali A.M.,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cartagena,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cartagena,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cartagena,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cartagena,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cúcuta A.M.,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cúcuta A.M.,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cúcuta A.M.,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Cúcuta A.M.,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Florencia,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Florencia,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Florencia,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Florencia,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Ibagué,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Ibagué,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Ibagué,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Ibagué,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Manizales A.M.,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Manizales A.M.,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Manizales A.M.,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Manizales A.M.,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Medellín A.M.,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Medellín A.M.,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Medellín A.M.,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Medellín A.M.,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Montería,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Montería,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Montería,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Montería,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Neiva,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Neiva,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Neiva,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Neiva,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Pasto,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Pasto,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Pasto,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Pasto,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Pereira A.M.,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Pereira A.M.,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Pereira A.M.,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Pereira A.M.,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Popayán,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Popayán,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Popayán,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Popayán,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Quibdó,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Quibdó,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Quibdó,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Quibdó,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Riohacha,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Riohacha,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Riohacha,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Riohacha,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Santa Marta,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Santa Marta,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Santa Marta,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Santa Marta,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Sincelejo,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Sincelejo,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Sincelejo,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Sincelejo,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Tunja,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Tunja,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Tunja,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Tunja,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Valledupar,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Valledupar,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Valledupar,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Valledupar,2026*,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Villavicencio,2023,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Villavicencio,2024,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Villavicencio,2025,,APROBADO,suma=100.0000%
+SUMA_TENENCIA,Villavicencio,2026*,,APROBADO,suma=100.0000%
+SENSIBILIDAD_OUTLIERS,Bogotá D.C.,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bogotá D.C.,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bogotá D.C.,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bogotá D.C.,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bogotá D.C.,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bogotá D.C.,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bogotá D.C.,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bogotá D.C.,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Medellín A.M.,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Medellín A.M.,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Medellín A.M.,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Medellín A.M.,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Medellín A.M.,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Medellín A.M.,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Medellín A.M.,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Medellín A.M.,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cali A.M.,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cali A.M.,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cali A.M.,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cali A.M.,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cali A.M.,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cali A.M.,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cali A.M.,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cali A.M.,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Barranquilla A.M.,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Barranquilla A.M.,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Barranquilla A.M.,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Barranquilla A.M.,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Barranquilla A.M.,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Barranquilla A.M.,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Barranquilla A.M.,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Barranquilla A.M.,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bucaramanga A.M.,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bucaramanga A.M.,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bucaramanga A.M.,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bucaramanga A.M.,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bucaramanga A.M.,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bucaramanga A.M.,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bucaramanga A.M.,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Bucaramanga A.M.,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Manizales A.M.,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Manizales A.M.,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Manizales A.M.,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Manizales A.M.,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Manizales A.M.,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Manizales A.M.,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Manizales A.M.,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Manizales A.M.,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pereira A.M.,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pereira A.M.,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pereira A.M.,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pereira A.M.,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pereira A.M.,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pereira A.M.,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pereira A.M.,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pereira A.M.,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cúcuta A.M.,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cúcuta A.M.,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cúcuta A.M.,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cúcuta A.M.,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cúcuta A.M.,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cúcuta A.M.,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cúcuta A.M.,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cúcuta A.M.,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Ibagué,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Ibagué,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Ibagué,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Ibagué,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Ibagué,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Ibagué,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Ibagué,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Ibagué,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pasto,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pasto,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pasto,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pasto,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pasto,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pasto,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pasto,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Pasto,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Villavicencio,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Villavicencio,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Villavicencio,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Villavicencio,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Villavicencio,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Villavicencio,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Villavicencio,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Villavicencio,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Montería,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Montería,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Montería,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Montería,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Montería,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Montería,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Montería,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Montería,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cartagena,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cartagena,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cartagena,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cartagena,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cartagena,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cartagena,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cartagena,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Cartagena,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Neiva,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Neiva,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Neiva,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Neiva,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Neiva,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Neiva,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Neiva,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Neiva,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Armenia,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Armenia,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Armenia,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Armenia,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Armenia,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Armenia,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Armenia,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Armenia,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Santa Marta,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Santa Marta,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Santa Marta,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Santa Marta,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Santa Marta,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Santa Marta,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Santa Marta,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Santa Marta,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Sincelejo,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Sincelejo,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Sincelejo,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Sincelejo,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Sincelejo,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Sincelejo,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Sincelejo,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Sincelejo,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Valledupar,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Valledupar,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Valledupar,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Valledupar,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Valledupar,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Valledupar,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Valledupar,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Valledupar,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Popayán,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Popayán,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Popayán,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Popayán,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Popayán,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Popayán,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Popayán,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Popayán,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Tunja,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Tunja,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Tunja,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Tunja,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Tunja,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Tunja,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Tunja,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Tunja,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Riohacha,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Riohacha,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Riohacha,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Riohacha,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Riohacha,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Riohacha,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Riohacha,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Riohacha,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Florencia,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Florencia,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Florencia,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Florencia,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Florencia,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Florencia,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Florencia,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Florencia,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Quibdó,2023,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Quibdó,2023,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Quibdó,2024,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Quibdó,2024,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Quibdó,2025,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Quibdó,2025,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Quibdó,2026*,Canon de arriendo,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+SENSIBILIDAD_OUTLIERS,Quibdó,2026*,Valor de venta,APROBADO,mediana estable ante winsorizacion P99 (cambio 0.000%)
+CONSISTENCIA_P5130_P5140,TODAS,TODOS,,APROBADO,0 hogares con P5090=3 tienen P5130 (universos correctamente disjuntos)
+CONSISTENCIA_P5130_P5140,TODAS,TODOS,,APROBADO,0 hogares con P5090!=3 tienen P5140
+CONSISTENCIA_P5130_P5140,Barranquilla A.M.,2025,,APROBADO,"medianas coinciden en 600,000 por redondeo (heaping), pero los promedios difieren (699,303 vs 872,768): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Cúcuta A.M.,2023,,APROBADO,"medianas coinciden en 400,000 por redondeo (heaping), pero los promedios difieren (447,929 vs 517,123): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Cúcuta A.M.,2025,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (532,210 vs 554,892): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Cúcuta A.M.,2026*,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (611,592 vs 671,857): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Ibagué,2025,,APROBADO,"medianas coinciden en 600,000 por redondeo (heaping), pero los promedios difieren (633,952 vs 757,116): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Montería,2024,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (598,056 vs 664,072): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Montería,2025,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (595,575 vs 677,213): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Cartagena,2023,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (618,604 vs 688,843): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Cartagena,2024,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (637,018 vs 715,524): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Cartagena,2025,,APROBADO,"medianas coinciden en 550,000 por redondeo (heaping), pero los promedios difieren (628,576 vs 684,100): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Cartagena,2026*,,APROBADO,"medianas coinciden en 600,000 por redondeo (heaping), pero los promedios difieren (738,211 vs 808,397): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Neiva,2024,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (542,803 vs 626,027): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Armenia,2024,,APROBADO,"medianas coinciden en 600,000 por redondeo (heaping), pero los promedios difieren (653,253 vs 767,064): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Armenia,2025,,APROBADO,"medianas coinciden en 600,000 por redondeo (heaping), pero los promedios difieren (679,512 vs 756,771): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Santa Marta,2023,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (555,674 vs 655,146): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Santa Marta,2024,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (572,855 vs 677,216): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Sincelejo,2024,,APROBADO,"medianas coinciden en 450,000 por redondeo (heaping), pero los promedios difieren (508,477 vs 533,095): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Sincelejo,2026*,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (574,607 vs 585,987): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Valledupar,2025,,APROBADO,"medianas coinciden en 500,000 por redondeo (heaping), pero los promedios difieren (520,908 vs 606,152): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Riohacha,2024,,APROBADO,"medianas coinciden en 400,000 por redondeo (heaping), pero los promedios difieren (424,312 vs 484,469): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Riohacha,2025,,APROBADO,"medianas coinciden en 400,000 por redondeo (heaping), pero los promedios difieren (448,220 vs 485,639): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Florencia,2023,,APROBADO,"medianas coinciden en 350,000 por redondeo (heaping), pero los promedios difieren (403,167 vs 393,720): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Florencia,2025,,APROBADO,"medianas coinciden en 400,000 por redondeo (heaping), pero los promedios difieren (469,125 vs 460,001): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Florencia,2026*,,APROBADO,"medianas coinciden en 450,000 por redondeo (heaping), pero los promedios difieren (488,514 vs 484,060): son series independientes, no una copia"
+CONSISTENCIA_P5130_P5140,Quibdó,2025,,APROBADO,"medianas coinciden en 350,000 por redondeo (heaping), pero los promedios difieren (399,306 vs 433,758): son series independientes, no una copia"
+UMBRAL_PUBLICACION,TODAS,TODOS,,APROBADO,0 de 2024 estimaciones violan el criterio DANE
+PANEL_ROTATIVO,Bogotá D.C.,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Bogotá D.C.,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Bogotá D.C.,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Bogotá D.C.,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Medellín A.M.,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Medellín A.M.,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Medellín A.M.,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Medellín A.M.,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cali A.M.,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cali A.M.,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cali A.M.,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cali A.M.,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Barranquilla A.M.,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Barranquilla A.M.,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Barranquilla A.M.,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Barranquilla A.M.,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Bucaramanga A.M.,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Bucaramanga A.M.,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Bucaramanga A.M.,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Bucaramanga A.M.,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Manizales A.M.,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Manizales A.M.,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Manizales A.M.,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Manizales A.M.,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Pereira A.M.,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Pereira A.M.,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Pereira A.M.,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Pereira A.M.,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cúcuta A.M.,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cúcuta A.M.,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cúcuta A.M.,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cúcuta A.M.,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Ibagué,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Ibagué,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Ibagué,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Ibagué,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Pasto,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Pasto,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Pasto,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Pasto,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Villavicencio,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Villavicencio,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Villavicencio,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Villavicencio,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Montería,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Montería,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Montería,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Montería,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cartagena,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cartagena,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cartagena,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Cartagena,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Neiva,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Neiva,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Neiva,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Neiva,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Armenia,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Armenia,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Armenia,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Armenia,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Santa Marta,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Santa Marta,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Santa Marta,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Santa Marta,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Sincelejo,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Sincelejo,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Sincelejo,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Sincelejo,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Valledupar,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Valledupar,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Valledupar,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Valledupar,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Popayán,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Popayán,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Popayán,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Popayán,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Tunja,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Tunja,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Tunja,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Tunja,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Riohacha,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Riohacha,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Riohacha,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Riohacha,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Florencia,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Florencia,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Florencia,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Florencia,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Quibdó,2023,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Quibdó,2024,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Quibdó,2025,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+PANEL_ROTATIVO,Quibdó,2026*,,APROBADO,0 repeticiones (0.00%) - por debajo del 5%
+CONSISTENCIA_P5090_CRUZADA,Bogotá D.C.,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=9322)
+CONSISTENCIA_P5090_CRUZADA,Medellín A.M.,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=11994)
+CONSISTENCIA_P5090_CRUZADA,Cali A.M.,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=10841)
+CONSISTENCIA_P5090_CRUZADA,Barranquilla A.M.,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7931)
+CONSISTENCIA_P5090_CRUZADA,Bucaramanga A.M.,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=9016)
+CONSISTENCIA_P5090_CRUZADA,Manizales A.M.,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=11379)
+CONSISTENCIA_P5090_CRUZADA,Pereira A.M.,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=11083)
+CONSISTENCIA_P5090_CRUZADA,Cúcuta A.M.,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8453)
+CONSISTENCIA_P5090_CRUZADA,Ibagué,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6867)
+CONSISTENCIA_P5090_CRUZADA,Pasto,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8510)
+CONSISTENCIA_P5090_CRUZADA,Villavicencio,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8094)
+CONSISTENCIA_P5090_CRUZADA,Montería,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=5991)
+CONSISTENCIA_P5090_CRUZADA,Cartagena,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8911)
+CONSISTENCIA_P5090_CRUZADA,Neiva,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7598)
+CONSISTENCIA_P5090_CRUZADA,Armenia,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8609)
+CONSISTENCIA_P5090_CRUZADA,Santa Marta,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7723)
+CONSISTENCIA_P5090_CRUZADA,Sincelejo,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7123)
+CONSISTENCIA_P5090_CRUZADA,Valledupar,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6853)
+CONSISTENCIA_P5090_CRUZADA,Popayán,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8502)
+CONSISTENCIA_P5090_CRUZADA,Tunja,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7666)
+CONSISTENCIA_P5090_CRUZADA,Riohacha,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6846)
+CONSISTENCIA_P5090_CRUZADA,Florencia,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7761)
+CONSISTENCIA_P5090_CRUZADA,Quibdó,2023,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8298)
+CONSISTENCIA_P5090_CRUZADA,Bogotá D.C.,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=9781)
+CONSISTENCIA_P5090_CRUZADA,Medellín A.M.,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=11849)
+CONSISTENCIA_P5090_CRUZADA,Cali A.M.,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=10548)
+CONSISTENCIA_P5090_CRUZADA,Barranquilla A.M.,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7772)
+CONSISTENCIA_P5090_CRUZADA,Bucaramanga A.M.,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8769)
+CONSISTENCIA_P5090_CRUZADA,Manizales A.M.,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=11334)
+CONSISTENCIA_P5090_CRUZADA,Pereira A.M.,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=11356)
+CONSISTENCIA_P5090_CRUZADA,Cúcuta A.M.,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8538)
+CONSISTENCIA_P5090_CRUZADA,Ibagué,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6681)
+CONSISTENCIA_P5090_CRUZADA,Pasto,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8823)
+CONSISTENCIA_P5090_CRUZADA,Villavicencio,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8149)
+CONSISTENCIA_P5090_CRUZADA,Montería,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=5908)
+CONSISTENCIA_P5090_CRUZADA,Cartagena,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8662)
+CONSISTENCIA_P5090_CRUZADA,Neiva,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7594)
+CONSISTENCIA_P5090_CRUZADA,Armenia,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8818)
+CONSISTENCIA_P5090_CRUZADA,Santa Marta,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7511)
+CONSISTENCIA_P5090_CRUZADA,Sincelejo,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6898)
+CONSISTENCIA_P5090_CRUZADA,Valledupar,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6735)
+CONSISTENCIA_P5090_CRUZADA,Popayán,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8104)
+CONSISTENCIA_P5090_CRUZADA,Tunja,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7659)
+CONSISTENCIA_P5090_CRUZADA,Riohacha,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6379)
+CONSISTENCIA_P5090_CRUZADA,Florencia,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7813)
+CONSISTENCIA_P5090_CRUZADA,Quibdó,2024,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7980)
+CONSISTENCIA_P5090_CRUZADA,Bogotá D.C.,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=9733)
+CONSISTENCIA_P5090_CRUZADA,Medellín A.M.,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=11825)
+CONSISTENCIA_P5090_CRUZADA,Cali A.M.,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=10150)
+CONSISTENCIA_P5090_CRUZADA,Barranquilla A.M.,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7939)
+CONSISTENCIA_P5090_CRUZADA,Bucaramanga A.M.,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8900)
+CONSISTENCIA_P5090_CRUZADA,Manizales A.M.,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=11639)
+CONSISTENCIA_P5090_CRUZADA,Pereira A.M.,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=11179)
+CONSISTENCIA_P5090_CRUZADA,Cúcuta A.M.,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8220)
+CONSISTENCIA_P5090_CRUZADA,Ibagué,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6711)
+CONSISTENCIA_P5090_CRUZADA,Pasto,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8900)
+CONSISTENCIA_P5090_CRUZADA,Villavicencio,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8440)
+CONSISTENCIA_P5090_CRUZADA,Montería,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=5918)
+CONSISTENCIA_P5090_CRUZADA,Cartagena,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8844)
+CONSISTENCIA_P5090_CRUZADA,Neiva,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7797)
+CONSISTENCIA_P5090_CRUZADA,Armenia,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=9233)
+CONSISTENCIA_P5090_CRUZADA,Santa Marta,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7865)
+CONSISTENCIA_P5090_CRUZADA,Sincelejo,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6931)
+CONSISTENCIA_P5090_CRUZADA,Valledupar,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6765)
+CONSISTENCIA_P5090_CRUZADA,Popayán,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8006)
+CONSISTENCIA_P5090_CRUZADA,Tunja,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=7929)
+CONSISTENCIA_P5090_CRUZADA,Riohacha,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=6485)
+CONSISTENCIA_P5090_CRUZADA,Florencia,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8021)
+CONSISTENCIA_P5090_CRUZADA,Quibdó,2025,,APROBADO,100.0% de coincidencia de P5090 entre bases (n=8305)
+DEFF_ANOMALO,Bogotá D.C.,2025,Valor estimado de venta de la vivienda - mediana,ADVERTENCIA,"DEFF=12.0 (CV=4.4%, n=3488). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Cali A.M.,2023,Canon de arriendo mensual - mediana,ADVERTENCIA,"DEFF=10.9 (CV=3.2%, n=5600). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Bucaramanga A.M.,2024,Canon de arriendo mensual - mediana,ADVERTENCIA,"DEFF=10.8 (CV=3.2%, n=4773). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Cúcuta A.M.,2023,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=15.2 (CV=4.7%, n=4854). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Cúcuta A.M.,2024,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=22.8 (CV=4.6%, n=5002). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Cúcuta A.M.,2025,Canon de arriendo mensual - mediana,ADVERTENCIA,"DEFF=14.5 (CV=4.1%, n=3293). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Pasto,2025,Valor estimado de venta de la vivienda - mediana,ADVERTENCIA,"DEFF=17.0 (CV=6.8%, n=2553). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Villavicencio,2025,Canon de arriendo mensual - mediana,ADVERTENCIA,"DEFF=17.2 (CV=4.0%, n=4712). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Neiva,2023,Canon de arriendo mensual - mediana,ADVERTENCIA,"DEFF=13.0 (CV=3.6%, n=3126). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Neiva,2025,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=13.7 (CV=4.7%, n=4522). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Armenia,2023,Canon de arriendo mensual - mediana,ADVERTENCIA,"DEFF=10.4 (CV=3.1%, n=4083). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Santa Marta,2024,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=12.4 (CV=5.4%, n=4053). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Santa Marta,2025,Canon de arriendo mensual - mediana,ADVERTENCIA,"DEFF=12.3 (CV=4.3%, n=3101). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Sincelejo,2023,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=20.1 (CV=5.6%, n=4812). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Sincelejo,2024,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=14.4 (CV=4.6%, n=4665). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Valledupar,2023,Canon de arriendo mensual - mediana,ADVERTENCIA,"DEFF=10.6 (CV=3.5%, n=3090). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Popayán,2023,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=36.7 (CV=6.6%, n=4671). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Tunja,2024,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=17.5 (CV=4.4%, n=3757). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Tunja,2026*,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=10.9 (CV=5.1%, n=1830). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Florencia,2024,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=31.4 (CV=6.0%, n=3743). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Florencia,2026*,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=16.5 (CV=5.3%, n=2154). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Quibdó,2023,Canon de arriendo mensual - mediana,ADVERTENCIA,"DEFF=16.9 (CV=4.0%, n=2784). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Quibdó,2023,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=18.0 (CV=4.0%, n=5459). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Quibdó,2024,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=34.3 (CV=6.0%, n=5406). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
+DEFF_ANOMALO,Quibdó,2025,Arriendo imputado (estimado) - mediana,ADVERTENCIA,"DEFF=13.8 (CV=4.9%, n=5626). Patron concentrado en medianas de variables con fuerte redondeo (heaping): la mediana ponderada salta entre valores redondos y su varianza bootstrap se infla frente al MAS. La estimacion puntual sigue siendo valida segun el CV."
