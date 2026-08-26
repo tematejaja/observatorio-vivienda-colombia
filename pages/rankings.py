@@ -76,3 +76,5 @@ else:
         with st.expander(f"Notas metodológicas de esta vista ({len(notas_unicas)})"):
             for n in notas_unicas:
                 st.markdown(f"- {n}")
+
+estilo.pie(estilo.FUENTES)

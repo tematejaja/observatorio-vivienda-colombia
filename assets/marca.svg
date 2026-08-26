@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Observatorio Nacional de Vivienda">
+  <title>Observatorio Nacional de Vivienda</title>
+  <path d="M6 23 L24 9 L42 23" fill="none" stroke="#B5502F" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="9.5"  y="33" width="5.4" height="8"  rx="1.2" fill="#B5502F"/>
+  <rect x="17.7" y="27" width="5.4" height="14" rx="1.2" fill="#B5502F"/>
+  <rect x="25.9" y="30" width="5.4" height="11" rx="1.2" fill="#B5502F"/>
+  <rect x="34.1" y="25" width="5.4" height="16" rx="1.2" fill="#8A3A1F"/>
+  <path d="M6 41.8 L42 41.8" stroke="#8A3A1F" stroke-width="1.7" stroke-linecap="round" opacity="0.55"/>
+</svg>

@@ -16,6 +16,9 @@
 !.streamlit/
 !.streamlit/config.toml
 
+!assets/
+!assets/*.svg
+
 !pages/
 !pages/*.py
 

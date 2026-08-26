@@ -3,10 +3,7 @@
 
 Antes era solo la tabla de 23 ciudades. Ahora la tabla va precedida de lo que
 alguien que llega por primera vez necesita para leerla bien: para que sirve el
-observatorio, que variables cubre y - la parte que casi ningun tablero publica -
-que cosas deliberadamente NO mide. Ese ultimo bloque no es relleno: es la misma
-disciplina que sostiene todo el pipeline (el dato nunca se oculta, pero tampoco
-se presenta como mas preciso de lo que es).
+observatorio, que variables cubre y que preguntas quedan fuera de su alcance.
 
 Todas las cifras de esta pagina se calculan en vivo desde la tabla maestra y los
 CSV de control; ninguna esta escrita a mano, para que no se desfasen si el
@@ -35,28 +32,37 @@ INDICADORES_CLAVE = [
 ]
 
 # Nombre legible y glosa de cada bloque del catalogo. El bloque
-# `deficit_habitacional` no esta aqui a proposito: vive en "Lo que no mide".
+# `deficit_habitacional` no esta aqui a proposito: vive en "Fuera de alcance".
 BLOQUES = {
-    "tenencia": ("Tenencia", "Cómo ocupa su vivienda el hogar: propia pagada o pagándose, arriendo, usufructo, posesión sin título."),
+    "tenencia": ("Tenencia", "Cómo ocupa el hogar su vivienda: propia pagada o pagándose, arriendo, usufructo, posesión sin título."),
     "arriendo": ("Mercado de arriendo", "Canon efectivamente pagado por los hogares arrendatarios: mediana, promedio y cuartiles."),
-    "esfuerzo_financiero": ("Esfuerzo financiero", "Qué proporción del ingreso se va en arriendo, y cuántos hogares superan los umbrales del 30 % y 50 %."),
-    "vivienda_propia_credito": ("Vivienda propia y crédito", "Valor comercial estimado, cuota hipotecaria y arriendo imputado de quienes son propietarios."),
+    "esfuerzo_financiero": ("Esfuerzo financiero", "Proporción del ingreso destinada al arriendo y hogares que superan los umbrales del 30 % y el 50 %."),
+    "vivienda_propia_credito": ("Vivienda propia y crédito", "Valor comercial estimado, cuota hipotecaria y arriendo imputado de los hogares propietarios."),
     "hacinamiento": ("Hacinamiento", "Personas por cuarto para dormir y hogares por encima del umbral crítico."),
-    "servicios_publicos": ("Servicios públicos", "Hogares sin acueducto, alcantarillado, gas a red, energía o recolección de basuras."),
-    "ingreso_pobreza": ("Ingreso y pobreza", "Ingreso del hogar y pobreza monetaria, separando propietarios de arrendatarios."),
+    "servicios_publicos": ("Servicios públicos", "Hogares sin acueducto, alcantarillado, gas conectado a red, energía o recolección de basuras."),
+    "ingreso_pobreza": ("Ingreso y pobreza", "Ingreso del hogar y pobreza monetaria, diferenciando propietarios de arrendatarios."),
 }
 
-NO_MIDE = [
+# Las columnas agrupan por tema, no por orden alfabetico: cada una responde una
+# pregunta distinta sobre el mismo hogar.
+COLUMNAS_BLOQUES = [
+    ["tenencia", "vivienda_propia_credito"],
+    ["arriendo", "esfuerzo_financiero", "ingreso_pobreza"],
+    ["hacinamiento", "servicios_publicos"],
+]
+
+FUERA_DE_ALCANCE = [
     ("Déficit habitacional cuantitativo y cualitativo",
-     "Requiere la Encuesta Nacional de Calidad de Vida (ECV), fuera del alcance de esta fase. "
-     "No se estimó ni se aproximó: cualquier cifra de déficit atribuida a este observatorio sería incorrecta."),
+     "Su cálculo requiere la Encuesta Nacional de Calidad de Vida, que no forma parte de esta fase. "
+     "No se estimó ni se aproximó por otras vías."),
     ("Estrato socioeconómico",
-     "Misma razón: la GEIH no lo trae con la desagregación necesaria para estas 23 ciudades."),
+     "La GEIH no incluye esta variable con la desagregación necesaria para las 23 ciudades."),
     ("Ingreso, carga financiera y pobreza en 2026*",
-     "El DANE no publica la medición de Pobreza Monetaria del año en curso, que requiere año calendario completo. "
-     "Esos ND son estructurales, no un fallo del cálculo."),
+     "El DANE publica la medición de Pobreza Monetaria por año calendario completo, de modo que "
+     "aún no existe la de 2026. Los ND de esas filas corresponden a esa ausencia de fuente."),
     ("Municipios distintos a estas 23 ciudades",
-     "El observatorio se limita a los dominios que la GEIH identifica por separado; el resto del país no es estimable con esta fuente."),
+     "El observatorio se limita a los dominios que la GEIH identifica por separado. El resto del "
+     "país no es estimable con esta fuente."),
 ]
 
 estilo.cabecera(
@@ -81,20 +87,23 @@ izq, der = st.columns([5, 4], gap="large")
 
 with izq:
     st.markdown(
-        '<div class="obs-tesis">Cuánto pesa la vivienda en el bolsillo de los hogares '
-        'colombianos —<em> con el margen de error a la vista.</em></div>',
+        '<div class="obs-tesis obs-anim obs-anim-1">Qué pagan por vivienda los hogares de las '
+        '23 ciudades principales de Colombia, <em>y con cuánta precisión lo sabemos.</em></div>',
         unsafe_allow_html=True,
     )
 
 with der:
     st.markdown(
-        '<div class="obs-entrada">Este observatorio reúne los indicadores de tenencia, '
-        'arriendo, esfuerzo financiero, hacinamiento, servicios públicos e ingreso de las '
-        '23 ciudades capitales y áreas metropolitanas del país, calculados directamente '
-        'desde los microdatos de la Gran Encuesta Integrada de Hogares del DANE.</div>'
-        '<div class="obs-entrada">Cada cifra se publica junto con su tamaño de muestra, su '
-        'intervalo de confianza y las advertencias que le apliquen. El dato nunca se '
-        'oculta ni se maquilla: si una estimación es frágil, lo dice.</div>',
+        '<div class="obs-anim obs-anim-2">'
+        '<div class="obs-entrada">Este observatorio reúne indicadores de tenencia, arriendo, '
+        'esfuerzo financiero, hacinamiento, servicios públicos e ingreso para las 23 ciudades '
+        'capitales y áreas metropolitanas del país. Todos se calculan a partir de los microdatos '
+        'de la Gran Encuesta Integrada de Hogares del DANE.</div>'
+        '<div class="obs-entrada">Cada estimación se publica con su tamaño de muestra, su '
+        'intervalo de confianza al 95 % y las advertencias metodológicas que le correspondan. '
+        'Cuando una cifra tiene poca precisión estadística, la nota al pie de la vista lo señala '
+        'en lugar de omitir el dato.</div>'
+        "</div>",
         unsafe_allow_html=True,
     )
 
@@ -109,13 +118,13 @@ controles = len(auditoria)
 estilo.seccion("El observatorio en cuatro cifras")
 c1, c2, c3, c4 = st.columns(4, gap="medium")
 with c1:
-    estilo.cifra(str(len(datos.NOMBRES)), "ciudades capitales y áreas metropolitanas")
+    estilo.cifra(str(len(datos.NOMBRES)), "ciudades capitales y áreas metropolitanas", orden=3)
 with c2:
-    estilo.cifra(_es(hogares), f"hogares encuestados en {meses} meses")
+    estilo.cifra(_es(hogares), f"hogares encuestados en {meses} meses", orden=4)
 with c3:
-    estilo.cifra(_es(con_precision), "estimaciones con intervalo de confianza")
+    estilo.cifra(_es(con_precision), "estimaciones con intervalo de confianza", orden=5)
 with c4:
-    estilo.cifra(str(rechazos), f"rechazos en {controles} controles de auditoría")
+    estilo.cifra(str(rechazos), f"rechazos en {controles} controles de auditoría", orden=6)
 
 # --- Qué mide ---------------------------------------------------------------
 
@@ -127,14 +136,6 @@ for bloque, nombre in catalogo:
     if "(control)" in nombre:      # fila de control de auditoría, no es un indicador publicado
         continue
     por_bloque.setdefault(bloque, []).append(nombre)
-
-# Las columnas agrupan por tema, no por orden alfabetico: cada una responde una
-# pregunta distinta sobre el mismo hogar.
-COLUMNAS_BLOQUES = [
-    ["tenencia", "vivienda_propia_credito"],            # cómo ocupa la vivienda
-    ["arriendo", "esfuerzo_financiero", "ingreso_pobreza"],  # cuánto le cuesta
-    ["hacinamiento", "servicios_publicos"],             # en qué condiciones
-]
 
 columnas = st.columns(3, gap="large")
 for columna, claves in zip(columnas, COLUMNAS_BLOQUES):
@@ -151,33 +152,35 @@ for columna, claves in zip(columnas, COLUMNAS_BLOQUES):
 
 total_indicadores = sum(len(v) for v in por_bloque.values())
 st.caption(
-    f"{total_indicadores} indicadores en {len(BLOQUES)} bloques, para cada ciudad y cada uno de "
-    f"los años 2023, 2024, 2025 y 2026*. 2026* es enero–junio: el único periodo publicado por el "
-    f"DANE al momento del cálculo."
+    f"{total_indicadores} indicadores en {len(BLOQUES)} bloques, para cada ciudad y para cada uno "
+    f"de los años 2023, 2024, 2025 y 2026*. El asterisco indica que 2026 cubre solo de enero a "
+    f"junio, el último periodo publicado por el DANE al momento del cálculo."
 )
 
-# --- Lo que no mide (el bloque que da carácter a la portada) ----------------
+# --- Fuera de alcance -------------------------------------------------------
 
-estilo.seccion("Lo que no mide")
+estilo.seccion("Fuera de alcance")
 
-filas_dl = "".join(f"<dt>{t}</dt><dd>{d}</dd>" for t, d in NO_MIDE)
+filas_dl = "".join(f"<dt>{t}</dt><dd>{d}</dd>" for t, d in FUERA_DE_ALCANCE)
 areas_metro = sum(1 for n in datos.NOMBRES if n.endswith("A.M."))
 st.markdown(
     f"""
     <div class="obs-nomide">
-      <h4>Los límites también son un resultado</h4>
-      <div class="intro">Un observatorio que solo publica lo que le conviene no sirve para decidir.
-      Estas son las preguntas que esta fuente <strong>no</strong> puede responder, y por qué:</div>
+      <h4>Lo que este observatorio no mide</h4>
+      <div class="intro">Estas preguntas no se pueden responder con las fuentes utilizadas.
+      Se listan de forma explícita para evitar que las cifras publicadas se usen para
+      responderlas.</div>
       <dl>{filas_dl}</dl>
     </div>
     """,
     unsafe_allow_html=True,
 )
 st.caption(
-    f"Además: {areas_metro} de las 23 unidades son áreas metropolitanas completas, no solo el "
-    f"municipio núcleo — no son comparables directamente con cifras municipales de otra fuente. "
-    f"El error estándar publicado es una cota inferior del real: los microdatos públicos de la "
-    f"GEIH no incluyen las variables de diseño muestral."
+    f"Dos advertencias generales. {areas_metro} de las 23 unidades corresponden al área "
+    f"metropolitana completa y no solo al municipio núcleo, por lo que no son comparables con "
+    f"cifras municipales de otra fuente. El error estándar publicado es una cota inferior del "
+    f"real, porque los microdatos públicos de la GEIH no incluyen las variables de diseño "
+    f"muestral."
 )
 
 # --- La tabla ---------------------------------------------------------------
@@ -217,9 +220,9 @@ st.dataframe(
     height=(len(resumen) + 1) * 35 + 3,
 )
 st.caption(
-    f"Año {ANIO_REFERENCIA}, el último completo. Clic en un encabezado para ordenar; "
-    f"use la Ficha de ciudad para ver una sola ciudad en detalle, o el Comparador para "
-    f"seguir la evolución de varias."
+    f"Datos de {ANIO_REFERENCIA}, el último año completo disponible. Las columnas se ordenan "
+    f"haciendo clic en el encabezado. La Ficha de ciudad muestra una sola ciudad en detalle y el "
+    f"Comparador sigue la evolución de varias a la vez."
 )
 
 notas_unicas = list(dict.fromkeys(notas_vista))
@@ -227,3 +230,5 @@ if notas_unicas:
     with st.expander(f"Notas metodológicas de esta vista ({len(notas_unicas)})"):
         for n in notas_unicas:
             st.markdown(f"- {n}")
+
+estilo.pie(estilo.FUENTES)

@@ -245,7 +245,4 @@ if notas_unicas:
 else:
     st.markdown("Ninguna cifra de esta ficha quedó marcada con una advertencia adicional.")
 
-st.caption(
-    "Fuentes: DANE — GEIH 2023–2026 (catálogos ANDA 782, 819, 853, 900); Pobreza Monetaria y "
-    "Desigualdad 2023–2025 (835, 874, 908); Proyecciones de población CNPV 2018."
-)
+estilo.pie(estilo.FUENTES)

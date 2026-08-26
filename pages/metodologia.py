@@ -21,29 +21,29 @@ estilo.cabecera(
 
 st.markdown(
     """
-Los indicadores de este observatorio se calculan a partir de microdatos públicos del DANE —
-la Gran Encuesta Integrada de Hogares (GEIH) y la medición de Pobreza Monetaria y Desigualdad,
-2023 a 2026\\* (2026 parcial: enero-junio) — para las 23 ciudades capitales y áreas
-metropolitanas de Colombia. El cálculo (Fase 1) está completo y auditado: 465 controles
-red-team aprobados, 0 rechazados.
+Los indicadores se calculan a partir de dos fuentes de microdatos públicos del DANE: la Gran
+Encuesta Integrada de Hogares (GEIH) y la Medición de Pobreza Monetaria y Desigualdad. El periodo
+cubierto va de 2023 a 2026\\*, donde el asterisco indica que 2026 comprende solo de enero a junio.
+La cobertura geográfica son las 23 ciudades capitales y áreas metropolitanas del país. El cálculo
+está completo y auditado, con 465 controles aprobados y ninguno rechazado.
 
-**Etiqueta de confiabilidad.** Cada Indicador trae una de cuatro etiquetas, según su tamaño de
-muestra (n) y coeficiente de variación (CV): **EXCELENTE**, **ACEPTABLE**, **PRECAUCIÓN** (CV
-alto o n bajo — usar con cautela) y **NO PUBLICAR** (n < 30 o CV > 25 % — no debe citarse). El
-valor nunca se oculta ni se reemplaza; la etiqueta solo indica cuánto cuidado requiere.
+**Etiqueta de confiabilidad.** Cada indicador trae una de cuatro etiquetas, asignadas según su
+tamaño de muestra (n) y su coeficiente de variación (CV): **EXCELENTE**, **ACEPTABLE**,
+**PRECAUCIÓN** (CV alto o n bajo) y **NO PUBLICAR** (n < 30 o CV > 25 %). La etiqueta indica el
+grado de cuidado que exige la cifra al citarla. El valor se muestra en todos los casos.
 
-**Nota Metodológica.** Cualquier limitación adicional relevante para interpretar una cifra —
-desvío frente a la proyección poblacional CNPV, un periodo parcial, que una ciudad sea un área
-metropolitana completa, una exclusión de valores extremos — se muestra como texto explícito en
-la vista correspondiente, nunca como un cambio silencioso al dato.
+**Notas metodológicas.** Las limitaciones que afectan la lectura de una cifra aparecen como texto
+en la nota al pie de cada vista. Incluyen el desvío frente a la proyección poblacional CNPV, los
+periodos parciales, las ciudades medidas como área metropolitana completa y la exclusión de
+valores extremos.
 
-**Limitación general del error estándar.** Los microdatos públicos de la GEIH no incluyen
-variables de diseño muestral (UPM/estrato); el error estándar se estimó por bootstrap agrupando
-en `DIRECTORIO` (la vivienda), que captura solo parte del efecto de conglomeración — es una
-cota inferior del error real.
+**Error estándar.** Los microdatos públicos de la GEIH no incluyen las variables de diseño
+muestral (UPM y estrato). La varianza se estimó por bootstrap agrupando en `DIRECTORIO`, que
+captura solo parte del efecto de conglomeración. Por esa razón el error estándar reportado debe
+leerse como una cota inferior del real.
 
-**Déficit habitacional:** no calculado en esta fase (requiere la Encuesta Nacional de Calidad
-de Vida, fuera de alcance de la Fase 1).
+**Déficit habitacional.** No se calcula en esta fase. Su estimación requiere la Encuesta Nacional
+de Calidad de Vida, que está fuera del alcance del trabajo.
 """
 )
 
@@ -72,3 +72,5 @@ for etiqueta, ruta, mime in archivos:
         )
     else:
         st.caption(f"{etiqueta}: archivo no encontrado ({ruta.name})")
+
+estilo.pie(estilo.FUENTES)

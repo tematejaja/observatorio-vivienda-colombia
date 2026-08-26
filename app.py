@@ -15,9 +15,13 @@ import streamlit as st
 BASE_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE_DIR / "scripts"))
 
+_MARCA = BASE_DIR / "assets" / "marca.svg"
+
 st.set_page_config(
     page_title="Observatorio Nacional de Vivienda",
-    page_icon=":material/house:",
+    # La misma marca de la barra lateral hace de favicon, para que la pestana
+    # del navegador quede identificada igual que la app.
+    page_icon=str(_MARCA) if _MARCA.exists() else ":material/house:",
     layout="wide",
 )
 
