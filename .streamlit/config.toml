@@ -1,10 +1,68 @@
+# Tema del Observatorio Nacional de Vivienda.
+#
+# Tono "editorial de datos" (sala de redaccion), no dashboard corporativo ni
+# PDF de gobierno. Tres decisiones deliberadas:
+#
+#  * Terracota (#B5502F) es el acento de marca - elegido comparando contra
+#    verde azulado y mostaza; evoca ladrillo. Se usa como color UNICO en las
+#    barras de Rankings (magnitud de un indicador = secuencial, no categorico).
+#  * El fondo se queda BLANCO a proposito. Terracota + fondo crema + serif de
+#    alto contraste es el look por defecto de cualquier plantilla; el crema
+#    tenue (#FBFAF9) se reserva para la barra lateral y paneles, no para la
+#    pagina.
+#  * Fraunces (titulos) + IBM Plex Sans (texto) + IBM Plex Mono (cifras):
+#    un serif old-style con caracter propio sobre una grotesca tecnica. La
+#    tension es la del proyecto: calidez editorial encima de maquinaria
+#    estadistica. La mono no es decorativa - alinea columnas de numeros.
+
 [theme]
 base = "light"
+
 primaryColor = "#B5502F"
 backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#FBF3EF"
-textColor = "#262220"
-font = "sans serif"
+secondaryBackgroundColor = "#FBFAF9"
+textColor = "#1C1917"
+linkColor = "#8A3A1F"
+borderColor = "#E7E5E4"
+dataframeBorderColor = "#E7E5E4"
+dataframeHeaderBackgroundColor = "#FBFAF9"
+
+# OJO: el valor se parte en el PRIMER ":" y todo lo que sigue se usa tal cual
+# como href del <link> de la fuente. No agregar ", sans-serif" ni ningun otro
+# fallback aqui - se pega a la URL y la rompe en silencio (la familia queda
+# aplicada en el CSS pero el archivo nunca carga). Streamlit ya agrega sus
+# propios fallbacks despues del nombre.
+font = "IBM Plex Sans:https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+headingFont = "Fraunces:https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap"
+codeFont = "IBM Plex Mono:https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
+
+# 17px en vez de 16px: sube el cuerpo de TODA la app, barra lateral incluida
+# (la barra lateral no tiene su propio baseFontSize; hereda la raiz).
+baseFontSize = 17
+
+# Escala mas apretada que la de fabrica en h2-h4: esta es una pagina densa de
+# datos, no una landing - los encabezados de seccion no deben competir con el
+# titular.
+headingFontSizes = ["2.6rem", "1.7rem", "1.3rem", "1.1rem", "1rem", "0.9rem"]
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+
+baseRadius = "small"
+buttonRadius = "small"
+showWidgetBorder = true
+showSidebarBorder = true
+
+# Misma paleta categorica validada que usa el Comparador (dataviz:
+# validate_palette.js contra fondo blanco). Deliberadamente distinta del
+# terracota de marca: identidad de ciudad y magnitud de un indicador son dos
+# trabajos de color distintos.
+chartCategoricalColors = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
+
+[theme.sidebar]
+backgroundColor = "#FBFAF9"
+secondaryBackgroundColor = "#F3F0EE"
+borderColor = "#E7E5E4"
+textColor = "#1C1917"
+linkColor = "#8A3A1F"
 
 [browser]
 gatherUsageStats = false

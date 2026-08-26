@@ -9,9 +9,15 @@ import streamlit as st
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR / "scripts"))
+import estilo
+
 OUT_DIR = BASE_DIR / "output"
 
-st.title("Metodología")
+estilo.cabecera(
+    antetitulo="Cómo se calculó",
+    titulo="Metodología",
+    bajada="Fuentes, umbrales de confiabilidad y los entregables completos para descargar.",
+)
 
 st.markdown(
     """

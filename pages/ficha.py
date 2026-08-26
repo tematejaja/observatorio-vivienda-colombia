@@ -12,6 +12,7 @@ import streamlit as st
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR / "scripts"))
 import datos_observatorio as datos
+import estilo
 from config_ciudades import NOMBRE_A_CIUDAD
 
 ANIOS = datos.ANIOS
@@ -51,7 +52,11 @@ def posicion(rankings, ciudad, nombre_ranking, anio="2025"):
     return int(fila.iloc[0]["posicion"])
 
 
-st.title("Ficha de ciudad")
+estilo.cabecera(
+    antetitulo="Perfil completo · 2023–2026*",
+    titulo="Ficha de ciudad",
+    bajada="Las nueve secciones del perfil de vivienda de una ciudad, con sus notas al pie.",
+)
 
 ciudad = st.selectbox("Ciudad", datos.NOMBRES)
 info = NOMBRE_A_CIUDAD[ciudad]

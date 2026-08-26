@@ -13,10 +13,15 @@ import streamlit as st
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR / "scripts"))
 import datos_observatorio as datos
+import estilo
 
 PALETA_CATEGORICA = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
 
-st.title("Comparador")
+estilo.cabecera(
+    antetitulo="Serie 2023–2026*",
+    titulo="Comparador",
+    bajada="Elija entre dos y seis ciudades y siga la evolución de un mismo indicador.",
+)
 
 tabla = datos.cargar_tabla_maestra()
 opciones = datos.indicadores_disponibles(tabla)

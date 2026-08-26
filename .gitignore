@@ -22,6 +22,7 @@
 !scripts/
 !scripts/datos_observatorio.py
 !scripts/config_ciudades.py
+!scripts/estilo.py
 !scripts/30_generar_fichas_ciudades.py
 
 !docs/

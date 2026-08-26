@@ -11,10 +11,15 @@ import streamlit as st
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR / "scripts"))
 import datos_observatorio as datos
+import estilo
 
-COLOR_ACENTO = "#B5502F"
+COLOR_ACENTO = estilo.TERRACOTA
 
-st.title("Rankings")
+estilo.cabecera(
+    antetitulo="Comparación nacional",
+    titulo="Rankings",
+    bajada="Las 23 ciudades ordenadas en uno de los cinco indicadores comparables, año por año.",
+)
 
 etiquetas_ranking = {r: r.split(". ", 1)[1] for r in datos.RANKINGS}
 nombre_ranking = st.selectbox(
