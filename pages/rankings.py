@@ -41,12 +41,18 @@ else:
     unidad = tabla_valida["unidad"].iloc[0]
     tabla_orden = tabla_valida.sort_values("valor", ascending=True)
 
+    # La unidad que trae rankings_nacionales.csv es "$" o "%". Antes se
+    # comparaba contra "COP", que nunca coincide, y el canon salia rotulado
+    # "800000.0$" en vez de "$800.000".
     if unidad == "%":
-        texto = tabla_orden["valor"].map(lambda v: f"{v:.1f}%")
-    elif unidad.upper() == "COP":
-        texto = tabla_orden["valor"].map(lambda v: f"${v:,.0f}")
+        texto = tabla_orden["valor"].map(lambda v: f"{v:.1f} %")
+        titulo_eje = "Porcentaje"
+    elif unidad in ("$", "COP"):
+        texto = tabla_orden["valor"].map(estilo.pesos)
+        titulo_eje = "Pesos corrientes"
     else:
         texto = tabla_orden["valor"].map(lambda v: f"{v:.1f} {unidad}")
+        titulo_eje = unidad
 
     fig = go.Figure(
         go.Bar(
@@ -60,9 +66,12 @@ else:
     )
     fig.update_layout(
         height=650,
-        margin=dict(l=10, r=40, t=10, b=10),
-        xaxis_title=unidad,
+        margin=dict(l=10, r=70, t=10, b=10),
+        xaxis_title=titulo_eje,
         yaxis_title=None,
+        # separators: primer caracter = decimal, segundo = miles. Español usa
+        # coma decimal y punto de miles.
+        separators=",.",
         transition={"duration": 300, "easing": "cubic-in-out"},
         uniformtext_minsize=10,
     )
@@ -71,7 +80,7 @@ else:
     notas_vista = []
     for _, fila in tabla_valida.iterrows():
         notas_vista += datos.notas_ranking(fila)
-    notas_unicas = list(dict.fromkeys(notas_vista))
+    notas_unicas = list(dict.fromkeys(estilo.legible(n) for n in notas_vista))
     if notas_unicas:
         with st.expander(f"Notas metodológicas de esta vista ({len(notas_unicas)})"):
             for n in notas_unicas:

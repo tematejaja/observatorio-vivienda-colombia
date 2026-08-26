@@ -127,21 +127,33 @@ def cargar_auditoria() -> pd.DataFrame:
 # cacheados arriba, son baratas).
 # --------------------------------------------------------------------------
 
-def indicadores_disponibles(tabla: pd.DataFrame | None = None, incluir_deficit: bool = False):
+def indicadores_disponibles(
+    tabla: pd.DataFrame | None = None,
+    incluir_deficit: bool = False,
+    incluir_controles: bool = False,
+):
     """Catalogo (bloque_indicador, nombre_indicador) presente en la tabla
-    maestra, en el orden en que aparecen las columnas. Por defecto excluye
-    `deficit_habitacional` (siempre ND en esta fase, FR-013) para no ofrecer
-    en un selector interactivo indicadores que nunca tienen valor."""
+    maestra, en el orden en que aparecen las columnas.
+
+    Por defecto excluye dos cosas que no son indicadores publicables:
+      * `deficit_habitacional`, siempre ND en esta fase (FR-013), para no
+        ofrecer en un selector algo que nunca tiene valor.
+      * las filas de control de auditoria (`... (control)`, p. ej. la suma de
+        categorias de tenencia, que debe dar 100 %): son un chequeo interno,
+        no una cifra que alguien quiera graficar.
+    """
     if tabla is None:
         tabla = cargar_tabla_maestra()
-    pares = (
+    pares = list(
         tabla[["bloque_indicador", "nombre_indicador"]]
         .drop_duplicates()
         .itertuples(index=False, name=None)
     )
-    if incluir_deficit:
-        return list(pares)
-    return [p for p in pares if p[0] != BLOQUE_SIN_DATOS_FASE1]
+    if not incluir_deficit:
+        pares = [p for p in pares if p[0] != BLOQUE_SIN_DATOS_FASE1]
+    if not incluir_controles:
+        pares = [p for p in pares if "(control)" not in p[1]]
+    return pares
 
 
 def _fila(tabla: pd.DataFrame, ciudad: str, anio: str, nombre_indicador: str):
@@ -207,17 +219,17 @@ def _nota_confiabilidad(etiqueta, n, cv, contexto: str) -> list[str]:
     cv = float(cv) if pd.notna(cv) else None
     detalle = f"n={n}" + (f", CV={cv:.1f}%" if cv is not None else "")
     if etiqueta == "NO PUBLICAR":
-        return [f"{contexto}: NO PUBLICAR ({detalle}) — no debe citarse."]
+        return [f"{contexto}: NO PUBLICAR ({detalle}). No debe citarse."]
     if etiqueta == "PRECAUCION":
-        return [f"{contexto}: PRECAUCIÓN ({detalle}) — usar con cautela."]
+        return [f"{contexto}: PRECAUCIÓN ({detalle}). Usar con cautela."]
     return []
 
 
 def _nota_area_metropolitana(ciudad: str) -> list[str]:
     if ciudad.endswith("A.M."):
         return [
-            f"{ciudad}: esta cifra corresponde al área metropolitana completa, no solo al "
-            f"municipio núcleo — no comparable directamente con cifras municipales de otra fuente."
+            f"{ciudad}: la cifra corresponde al área metropolitana completa y no solo al "
+            f"municipio núcleo. No es comparable con cifras municipales de otra fuente."
         ]
     return []
 
@@ -267,7 +279,10 @@ def notas(ciudad: str, anio: str, nombre_indicador: str | None = None) -> list[s
             # explica algo: por que esta fila esta senalada (NO PUBLICAR/
             # PRECAUCION) o por que no tiene valor (ND/NO_APLICA).
             if et in ("NO PUBLICAR", "PRECAUCION") and isinstance(obs, str) and obs.strip():
-                out.append(f"{contexto}: {obs.strip()}")
+                # Sin el año: la observacion suele ser definicional (que mide el
+                # indicador) y es identica en los 4 años. Con el año prefijado se
+                # repetiria cuatro veces en la nota al pie.
+                out.append(f"{nombre_indicador}: {obs.strip()}")
             elif et in ("ND", "NO_APLICA") and isinstance(obs, str) and obs.strip():
                 # Sin el prefijo de indicador/anio: el mismo motivo estructural
                 # (p. ej. "el DANE no publica X para 2026") se repite identico
@@ -293,9 +308,9 @@ def notas(ciudad: str, anio: str, nombre_indicador: str | None = None) -> list[s
                 if abs(sesgo) >= 1.0 and (abs(ing) < 1.0 or (ing * hom) < 0):
                     out.append(
                         f"{nombre_indicador}: comparar 2026* contra el año 2025 completo daría "
-                        f"{ing:+.1f}% en vez de la variación pareada ({hom:+.1f}%) — "
-                        f"{abs(sesgo):.1f} pp de efecto estacional, no cambio real. "
-                        f"Cite siempre la cifra pareada."
+                        f"{ing:+.1f}% en vez de la variación pareada ({hom:+.1f}%). Esa "
+                        f"diferencia de {abs(sesgo):.1f} pp es efecto estacional y no un cambio "
+                        f"real. Cite siempre la cifra pareada."
                     )
 
     # Desvio poblacional CNPV - a nivel ciudad-anio, independiente del indicador.
@@ -304,9 +319,9 @@ def notas(ciudad: str, anio: str, nombre_indicador: str | None = None) -> list[s
     pv = pob[(pob["ciudad_nombre"] == ciudad) & (pob["anio"] == anio_plano)]
     if not pv.empty and pv.iloc[0]["estado_poblacional"] == "REVISAR":
         out.append(
-            f"{ciudad} ({anio}): desvío poblacional fuera de tolerancia frente a la proyección "
-            f"CNPV 2018 — es una divergencia de calibración de FEX_C18, no un error de "
-            f"identificación geográfica; afecta los niveles absolutos de población expandida, "
+            f"{ciudad} ({anio}): la población expandida se desvía de la proyección CNPV 2018 más "
+            f"allá de la tolerancia. Corresponde a una divergencia de calibración de FEX_C18 y no "
+            f"a un error de identificación geográfica. Afecta los niveles absolutos de población, "
             f"no los porcentajes ni las medianas."
         )
 
@@ -316,8 +331,9 @@ def notas(ciudad: str, anio: str, nombre_indicador: str | None = None) -> list[s
     # Periodo parcial 2026* - a nivel anio, constante.
     if anio == "2026*":
         out.append(
-            "2026* = enero–junio, único periodo publicado por el DANE al momento del cálculo — "
-            "toda variación frente a 2026* debe usar comparación pareada, nunca el año completo."
+            "2026* cubre solo de enero a junio, el último periodo publicado por el DANE al "
+            "momento del cálculo. Toda variación frente a 2026* debe usar comparación pareada "
+            "contra los mismos meses, nunca contra el año completo."
         )
 
     return out

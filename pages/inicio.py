@@ -201,7 +201,10 @@ resumen = pd.DataFrame(filas)
 
 column_config = {
     "Ciudad": st.column_config.TextColumn(width="medium"),
-    "Canon mediano de arriendo (COP)": st.column_config.NumberColumn(format="$ %d"),
+    # "localized" usa la configuracion regional de quien mira, que en Colombia
+    # da $600.000. El printf "%d" con coma daba $600,000, que aqui se lee como
+    # decimales.
+    "Canon mediano de arriendo (COP)": st.column_config.NumberColumn(format="localized"),
 }
 for etiqueta in [
     "% en arriendo",
@@ -225,7 +228,7 @@ st.caption(
     f"Comparador sigue la evolución de varias a la vez."
 )
 
-notas_unicas = list(dict.fromkeys(notas_vista))
+notas_unicas = list(dict.fromkeys(estilo.legible(n) for n in notas_vista))
 if notas_unicas:
     with st.expander(f"Notas metodológicas de esta vista ({len(notas_unicas)})"):
         for n in notas_unicas:

@@ -23,6 +23,7 @@ Regla que se mantiene del diseno original: nada de esto anima ni decora un
 valor. Las advertencias siguen yendo en la nota al pie consolidada por vista
 (ADR-0005), no incrustadas en la cifra.
 """
+import re
 from pathlib import Path
 
 import streamlit as st
@@ -309,6 +310,40 @@ section[data-testid="stSidebar"] [data-testid="stSidebarNav"] a span {{
 }}
 </style>
 """
+
+
+# Los CSV del pipeline guardan los nombres de indicador y las observaciones sin
+# tildes (se escribieron asi para evitar problemas de codificacion en consola
+# Windows). En pantalla eso se ve descuidado, asi que se restituyen aqui, en la
+# capa de presentacion: los datos no se tocan. Solo palabras inequivocas - se
+# excluyen a proposito las formas verbales homografas ("publica", "calcula",
+# "ganan"), que en estos textos no llevan tilde.
+_TILDES = {
+    "Deficit": "Déficit", "Definicion": "Definición", "Distribucion": "Distribución",
+    "Medicion": "Medición", "Posesion": "Posesión", "auditoria": "auditoría",
+    "categorias": "categorías", "critico": "crítico", "electrica": "eléctrica",
+    "energia": "energía", "estan": "están", "recoleccion": "recolección",
+    "socioeconomico": "socioeconómico", "titulo": "título", "mas": "más",
+}
+_TILDES_RE = re.compile(r"\b(" + "|".join(map(re.escape, _TILDES)) + r")\b")
+
+
+def legible(texto: str) -> str:
+    """Restituye las tildes que los CSV del pipeline no traen. Se aplica solo
+    al mostrar; nunca al comparar o filtrar (las llaves siguen siendo las del
+    CSV)."""
+    return _TILDES_RE.sub(lambda m: _TILDES[m.group(0)], texto)
+
+
+def numero(n) -> str:
+    """Entero con separador de miles en español (punto): 682.054."""
+    return f"{n:,.0f}".replace(",", ".")
+
+
+def pesos(n) -> str:
+    """Importe en pesos con separador español: $600.000. El formato con coma
+    de miles ($600,000) se lee como decimales en Colombia."""
+    return f"${numero(n)}"
 
 
 def aplicar_estilo() -> None:

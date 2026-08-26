@@ -23,7 +23,7 @@ def fmt(ind: dict | None, tipo: str = "num", decimales: int = 1) -> str:
         return str(ind["valor"]) if ind is not None else "ND"
     v = ind["valor"]
     if tipo == "cop":
-        return f"${v:,.0f}"
+        return estilo.pesos(v)
     if tipo == "pct":
         return f"{v:.{decimales}f}%"
     return f"{v:.{decimales}f}"
@@ -55,7 +55,8 @@ def posicion(rankings, ciudad, nombre_ranking, anio="2025"):
 estilo.cabecera(
     antetitulo="Perfil completo · 2023–2026*",
     titulo="Ficha de ciudad",
-    bajada="Las nueve secciones del perfil de vivienda de una ciudad, con sus notas al pie.",
+    bajada="Tenencia, arriendo, esfuerzo financiero, hacinamiento y servicios de una ciudad, "
+           "con sus notas metodológicas al pie.",
 )
 
 ciudad = st.selectbox("Ciudad", datos.NOMBRES)
@@ -68,6 +69,7 @@ notas_vista: list[str] = []
 
 ctrl_c = ctrl[ctrl["ciudad_nombre"] == ciudad]
 n_total = int(ctrl_c["registros"].sum())
+meses_ciudad = ctrl_c.groupby(["anio", "mes"]).ngroups
 hogares_mes = ctrl_c[ctrl_c["anio"] == 2025]["suma_fex_c18"].mean()
 
 c1, c2, c3 = st.columns(3)
@@ -75,8 +77,8 @@ c1.metric("Dominio GEIH (AREA)", info["area"])
 c2.metric("Departamento", info["dpto_nombre"])
 c3.metric("Periodo", "2023–2026*")
 st.caption(
-    f"Muestra: {n_total:,} hogares encuestados en 42 meses · "
-    f"Hogares expandidos (promedio mensual 2025): {hogares_mes:,.0f}"
+    f"Muestra: {estilo.numero(n_total)} hogares encuestados en {meses_ciudad} meses · "
+    f"Hogares expandidos (promedio mensual 2025): {estilo.numero(hogares_mes)}"
 )
 st.info(
     "2026\\* = enero–junio de 2026, único periodo publicado por el DANE. Toda variación de "
@@ -141,6 +143,43 @@ st.caption(
     "confundirse con el arriendo imputado (sección 5), que es una estimación del propio hogar "
     "y no un pago real."
 )
+
+# Variacion pareada Ene-Jun 2026 contra los MISMOS meses de 2025 (Principio V).
+# Estaba en la ficha Markdown y faltaba aqui: es el punto donde es mas facil
+# equivocarse al citar la cifra de 2026*.
+temporal = datos.cargar_validacion_temporal()
+fila_temp = temporal[
+    (temporal["ciudad_nombre"] == ciudad)
+    & (temporal["indicador"] == "Canon mediano de arriendo")
+]
+if not fila_temp.empty:
+    r_t = fila_temp.iloc[0]
+    homogenea = r_t["variacion_homogenea"]
+    ingenua = r_t["variacion_ingenua"]
+    sesgo = r_t["sesgo_estacional"]
+    st.markdown(
+        f"**Variación del canon mediano, 2025 a 2026\\*** (comparación pareada enero–junio): "
+        f"**{homogenea:+.1f} %**"
+    )
+    # El caso que importa no es que las dos cifras difieran, sino que cambie la
+    # LECTURA: si la comparacion ingenua es plana o de signo contrario, se avisa.
+    if abs(sesgo) >= 1.0 and (abs(ingenua) < 1.0 or (ingenua * homogenea) < 0):
+        lectura = (
+            "sugeriría que el arriendo no subió"
+            if abs(ingenua) < 1.0
+            else "sugeriría un movimiento en sentido contrario"
+        )
+        st.warning(
+            f"Comparar 2026\\* contra el año 2025 completo daría {ingenua:+.1f} %, lo que "
+            f"{lectura}. Esa diferencia de {abs(sesgo):.1f} pp es efecto estacional y no un "
+            f"cambio real de precios. Cite siempre la cifra pareada.",
+            icon=":material/warning:",
+        )
+    else:
+        st.caption(
+            f"Comparar contra el año 2025 completo daría {ingenua:+.1f} %, un sesgo estacional "
+            f"de {sesgo:+.1f} pp. Cite siempre la cifra pareada."
+        )
 
 # --- 4. Esfuerzo financiero ---
 st.header("4. ¿Cuánto pesa el arriendo en el bolsillo?")
@@ -211,7 +250,7 @@ espec = [
 st.dataframe(tabla_series(tabla, ciudad, espec, notas_vista), use_container_width=True)
 
 # --- 7. Déficit habitacional ---
-st.header("7. Déficit habitacional — no disponible en esta fase")
+st.header("7. Déficit habitacional: no disponible en esta fase")
 espec_deficit = [
     "Deficit habitacional cuantitativo",
     "Deficit habitacional cualitativo",
@@ -220,7 +259,7 @@ espec_deficit = [
 filas = []
 for nombre_indicador in espec_deficit:
     ind = datos.indicador(tabla, ciudad, "2023", nombre_indicador)
-    filas.append({"Indicador": nombre_indicador, "Estado": fmt(ind)})
+    filas.append({"Indicador": estilo.legible(nombre_indicador), "Estado": fmt(ind)})
 st.dataframe(pd.DataFrame(filas), hide_index=True, use_container_width=True)
 st.caption(
     "Estos indicadores requieren la Encuesta Nacional de Calidad de Vida (ECV), que no forma "
@@ -237,9 +276,11 @@ st.markdown(
     "El error estándar publicado es una cota inferior.\n"
     "2. **El déficit habitacional no está calculado** (sección 7)."
 )
-notas_unicas = list(dict.fromkeys(notas_vista))
+notas_unicas = list(dict.fromkeys(estilo.legible(n) for n in notas_vista))
 if notas_unicas:
-    st.markdown(f"**{len(notas_unicas)} cifra(s) de esta ficha requieren cuidado adicional:**")
+    st.markdown(
+        f"**{len(notas_unicas)} advertencias aplican a las cifras de esta ficha:**"
+    )
     for n in notas_unicas:
         st.markdown(f"- {n}")
 else:
