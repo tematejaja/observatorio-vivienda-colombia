@@ -27,6 +27,7 @@
 !scripts/config_ciudades.py
 !scripts/estilo.py
 !scripts/30_generar_fichas_ciudades.py
+!scripts/40_ecv_viabilidad.py
 
 !docs/
 !docs/adr/
@@ -45,6 +46,7 @@
 !GEIH/procesado_nacional/validacion_poblacion_cnpv.csv
 !GEIH/procesado_nacional/validacion_temporal_nacional.csv
 !GEIH/procesado_nacional/auditoria_red_team_nacional.csv
+!GEIH/procesado_nacional/ecv_viabilidad_23ciudades.csv
 
 !fichas_ciudades/
 !fichas_ciudades/*.md
