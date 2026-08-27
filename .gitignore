@@ -30,6 +30,7 @@
 !scripts/config_areas_metropolitanas.py
 !scripts/config_deficit.py
 !scripts/40_ecv_viabilidad.py
+!scripts/41_deficit_nacional.py
 
 !docs/
 !docs/adr/

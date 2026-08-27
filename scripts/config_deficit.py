@@ -161,9 +161,21 @@ SI, NO = 1, 2
 # Cifras oficiales del DANE contra las que hay que validar el calculo antes de
 # publicar nada por ciudad (boletines tecnicos ECV):
 VALIDACION_OFICIAL = {
-    2023: {"total_nacional": 28.9, "cualitativo_nacional": 22.1},
-    2024: {"total_nacional": 26.8, "cualitativo_nacional": 20.0,
-           "total_cabeceras": 19.6, "total_centros_poblados_rural": 65.5,
-           "hacinamiento_mitigable": 10.5, "alcantarillado": 9.5,
-           "agua_para_cocinar": 8.5},
+    # Fuente: anexo oficial ECV 2024 del DANE, "Cuadro 10 - Hogares por deficit
+    # habitacional segun tipo y componentes" (anex-ECV-2024.xlsx). Son las
+    # cifras exactas, no las de prensa: circulan por ahi un 19,6% de cabeceras
+    # y un 65,5% de rural que NO corresponden a este cuadro.
+    2024: {
+        "hogares_miles": 18324, "hogares_cabecera_miles": 14338,
+        "total_nacional": 26.8436, "cuantitativo_nacional": 6.8158,
+        "cualitativo_nacional": 20.0278,
+        "total_cabecera": 17.2910, "cuantitativo_cabecera": 2.8041,
+        "cualitativo_cabecera": 14.4869,
+        "total_resto": 61.2035,
+        # componentes en CABECERA, columna "jerarquizado" (que es la excluyente,
+        # la que corresponde a este calculo)
+        "cab_hacinamiento_mitigable": 8.0464, "cab_pisos": 0.6081,
+        "cab_cocina": 2.3890, "cab_agua": 1.1967, "cab_alcantarillado": 5.4829,
+        "cab_energia": 0.0855, "cab_basuras": 0.8780,
+    },
 }
