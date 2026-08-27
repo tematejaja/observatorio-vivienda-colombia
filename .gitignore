@@ -27,6 +27,7 @@
 !scripts/config_ciudades.py
 !scripts/estilo.py
 !scripts/30_generar_fichas_ciudades.py
+!scripts/config_areas_metropolitanas.py
 !scripts/40_ecv_viabilidad.py
 
 !docs/

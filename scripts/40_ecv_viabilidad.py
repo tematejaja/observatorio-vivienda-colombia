@@ -33,6 +33,7 @@ import requests
 SCRIPTS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 from config_ciudades import CIUDADES, stdout_utf8
+from config_areas_metropolitanas import resolver_codigos
 
 BASE_DIR = SCRIPTS_DIR.parent
 ECV_DIR = BASE_DIR / "GEIH" / "ECV"
@@ -47,10 +48,11 @@ ECV_VIVIENDA = {
     2025: ("https://microdatos.dane.gov.co/index.php/catalog/905/download/24628", "ecv_2025_vivienda.zip"),
 }
 
-# HIPOTESIS, no verdad asumida (Principio II): en DIVIPOLA la capital de cada
-# departamento suele ser el municipio `DD001`. El script lo VERIFICA contra los
-# codigos que realmente aparecen en los microdatos antes de usarlo.
-CAPITALES_HIPOTESIS = {c["nombre"]: c["dpto_divipola"].zfill(2) + "001" for c in CIUDADES}
+# Composicion municipal de cada ciudad, resuelta contra el archivo oficial de
+# proyecciones del DANE (ver config_areas_metropolitanas). Las 7 ciudades A.M.
+# suman varios municipios, tal como las define la GEIH, para que "Medellin A.M."
+# signifique lo mismo en la Fase 1 y en la Fase 2.
+COMPOSICION = resolver_codigos()
 
 # Umbrales del Principio VI ya usados en la Fase 1.
 N_MINIMO_PUBLICAR = 30
@@ -121,13 +123,16 @@ def main() -> None:
                             + viv[col_mpio].astype(str).str.strip().str.zfill(3).str[-3:])
 
         presentes = set(viv["_divipola"].unique())
-        for nombre, codigo in CAPITALES_HIPOTESIS.items():
-            sub = viv[viv["_divipola"] == codigo]
+        for nombre, codigos in COMPOSICION.items():
+            sub = viv[viv["_divipola"].isin(codigos)]
             n = len(sub)
             n_cabecera = int((sub[col_clase].astype(str).str.strip() == "1").sum()) if col_clase and n else n
+            faltantes = [c for c in codigos if c not in presentes]
             filas.append({
-                "anio": anio, "ciudad": nombre, "divipola_hipotesis": codigo,
-                "codigo_existe_en_ecv": codigo in presentes,
+                "anio": anio, "ciudad": nombre,
+                "municipios": " ".join(codigos),
+                "n_municipios": len(codigos),
+                "municipios_sin_muestra": " ".join(faltantes) if faltantes else "",
                 "n_viviendas": n, "n_viviendas_cabecera": n_cabecera,
                 "veredicto": ("SIN_DATOS" if n == 0 else
                               "NO_PUBLICAR" if n_cabecera < N_MINIMO_PUBLICAR else
