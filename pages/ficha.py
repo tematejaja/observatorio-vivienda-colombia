@@ -250,31 +250,81 @@ espec = [
 st.dataframe(tabla_series(tabla, ciudad, espec, notas_vista), use_container_width=True)
 
 # --- 7. Déficit habitacional ---
-st.header("7. Déficit habitacional: no disponible en esta fase")
-espec_deficit = [
-    "Deficit habitacional cuantitativo",
-    "Deficit habitacional cualitativo",
-    "Distribucion por estrato socioeconomico",
-]
-filas = []
-for nombre_indicador in espec_deficit:
-    ind = datos.indicador(tabla, ciudad, "2023", nombre_indicador)
-    filas.append({"Indicador": estilo.legible(nombre_indicador), "Estado": fmt(ind)})
-st.dataframe(pd.DataFrame(filas), hide_index=True, use_container_width=True)
+st.header("7. Déficit habitacional, materiales y estrato")
 st.caption(
-    "Estos indicadores requieren la Encuesta Nacional de Calidad de Vida (ECV), que no forma "
-    "parte del alcance de esta fase. No fueron estimados ni aproximados: cualquier cifra de "
-    "déficit habitacional atribuida a este observatorio sería incorrecta."
+    "Fuente distinta al resto de la ficha: Encuesta Nacional de Calidad de Vida (ECV), no GEIH. "
+    "Se aplica la metodología oficial de déficit habitacional del DANE (2020) con sus criterios "
+    "de cabecera municipal. La réplica reproduce el dato publicado: en cabecera nacional 2024 da "
+    "17,18 % contra 17,29 % oficial, y los siete componentes coinciden dentro de 0,07 puntos."
+)
+# El bloque de deficit no vuelca una nota por fila: por la muestra de la ECV
+# tiene decenas de celdas en PRECAUCION o NO PUBLICAR, y enumerarlas una a una
+# ahogaria el pie de la ficha. Se consolidan en una sola linea mas abajo
+# (ADR-0005: una nota al pie por vista).
+notas_deficit = []
+espec = [
+    ("Déficit habitacional total", "Deficit habitacional total", "pct", 2),
+    ("— cuantitativo (estructural)", "Deficit habitacional cuantitativo", "pct", 2),
+    ("— cualitativo (subsanable)", "Deficit habitacional cualitativo", "pct", 2),
+]
+st.dataframe(tabla_series(tabla, ciudad, espec, notas_deficit), use_container_width=True)
+st.caption(
+    "Las dos categorías son excluyentes: un hogar en déficit cuantitativo no se cuenta además "
+    "en cualitativo, así que total = cuantitativo + cualitativo."
+)
+
+espec = [
+    ("Hacinamiento mitigable", "Componente: hacinamiento mitigable", "pct", 2),
+    ("Lugar inadecuado para cocinar", "Componente: lugar inadecuado para cocinar", "pct", 2),
+    ("Alcantarillado o sanitario inadecuado",
+     "Componente: alcantarillado o sanitario inadecuado", "pct", 2),
+    ("Sin acueducto", "Componente: sin acueducto", "pct", 2),
+    ("Sin recolección de basuras", "Componente: sin recoleccion de basuras", "pct", 2),
+    ("Paredes en material inadecuado", "Paredes en material inadecuado", "pct", 2),
+    ("Pisos de tierra, arena o barro", "Pisos de tierra, arena o barro", "pct", 2),
+]
+st.dataframe(tabla_series(tabla, ciudad, espec, notas_deficit), use_container_width=True)
+
+espec = [
+    ("Estrato 1 o 2", "Hogares en estrato 1 o 2", "pct", 2),
+    ("Estrato 3", "Hogares en estrato 3", "pct", 2),
+    ("Estrato 4, 5 o 6", "Hogares en estrato 4, 5 o 6", "pct", 2),
+    ("Sin estrato o no informa", "Hogares sin estrato o no informa", "pct", 2),
+]
+st.dataframe(tabla_series(tabla, ciudad, espec, notas_deficit), use_container_width=True)
+
+_bloque = tabla[(tabla["ciudad"] == ciudad)
+                & (tabla["bloque_indicador"] == "deficit_habitacional")
+                & (tabla["anio"] != "2026*")]
+_no = int((_bloque["etiqueta_confiabilidad"] == "NO PUBLICAR").sum())
+_pre = int((_bloque["etiqueta_confiabilidad"] == "PRECAUCION").sum())
+if _no or _pre:
+    notas_vista.append(
+        f"Sección 7 (déficit, ECV): {_no} estimación(es) marcadas NO PUBLICAR y {_pre} en "
+        f"PRECAUCIÓN, por el tamaño de la muestra que la ECV asigna a esta ciudad. Están "
+        f"señaladas en las tablas de esa sección; no se enumeran aquí una por una."
+    )
+st.caption(
+    "El estrato se publica agrupado porque con unos 700 hogares de muestra por ciudad los "
+    "estratos 4, 5 y 6 por separado no alcanzan precisión utilizable. Es el estrato que el "
+    "hogar reporta en su factura de energía. Con la muestra que la ECV asigna a cada ciudad, el "
+    "déficit total, el cualitativo, el hacinamiento y el estrato 1 o 2 se estiman con precisión "
+    "utilizable; el déficit cuantitativo y los componentes poco frecuentes quedan casi siempre "
+    "marcados NO PUBLICAR, lo que no significa que valgan cero sino que la muestra no permite "
+    "afirmarlos para una ciudad. 2026* aparece en ND: el DANE aún no publica la ECV 2026."
 )
 
 # --- Notas metodológicas (reemplaza las secciones 8-9 del Markdown, ADR-0005) ---
 st.header("Notas metodológicas de esta ficha")
 st.markdown(
-    "1. **El margen de error real es mayor al reportado.** Los microdatos públicos de la GEIH "
-    "no incluyen variables de diseño muestral (UPM/estrato); la varianza se estimó por "
-    "bootstrap agrupando en `DIRECTORIO`, que captura solo parte del efecto de conglomeración. "
-    "El error estándar publicado es una cota inferior.\n"
-    "2. **El déficit habitacional no está calculado** (sección 7)."
+    "1. **El margen de error de las cifras GEIH es mayor al reportado.** Los microdatos "
+    "públicos de la GEIH no incluyen variables de diseño muestral (UPM/estrato); su varianza se "
+    "estimó por bootstrap agrupando en `DIRECTORIO`, que captura solo parte del efecto de "
+    "conglomeración, así que ese error estándar es una cota inferior. No aplica a la sección 7: "
+    "la ECV sí publica sus variables de diseño, y allí la varianza se estima con el diseño real "
+    "(estrato y UPM).\n"
+    "2. **El déficit habitacional viene de otra encuesta** (sección 7): es ECV, no GEIH, y son "
+    "años completos distintos a la serie GEIH. No mezcle ambas fuentes en una misma serie."
 )
 notas_unicas = list(dict.fromkeys(estilo.legible(n) for n in notas_vista))
 if notas_unicas:

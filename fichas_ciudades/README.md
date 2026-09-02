@@ -35,7 +35,7 @@ Generadas desde la tabla maestra auditada de la Fase 1 (465 controles aprobados,
 **Advertencias comunes a todas las fichas:**
 
 - `2026*` es enero–junio; las variaciones usan comparación pareada.
-- El déficit habitacional está en `ND` (requiere ECV, fuera de alcance).
+- El déficit habitacional (sección 7) proviene de la ECV, no de la GEIH; `2026*` queda en `ND` porque el DANE aún no la publica.
 - No hay ingreso ni pobreza para 2026 (el DANE no lo publica).
 - El error estándar reportado es una cota inferior del real.
 - Las cifras ~~tachadas~~ 🔴 no son publicables (n < 30 o CV > 25 %).

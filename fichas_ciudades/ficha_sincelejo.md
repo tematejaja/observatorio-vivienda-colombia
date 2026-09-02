@@ -112,15 +112,43 @@
 
 ---
 
-## 7. Déficit habitacional — **no disponible en esta fase**
+## 7. Déficit habitacional, materiales y estrato
 
-| Indicador | Estado |
-|---|---|
-| Déficit habitacional cuantitativo | `ND — pendiente Fase 2 (ECV)` |
-| Déficit habitacional cualitativo | `ND — pendiente Fase 2 (ECV)` |
-| Distribución por estrato socioeconómico | `ND — pendiente Fase 2 (ECV)` |
+Fuente distinta al resto de la ficha: **Encuesta Nacional de Calidad de Vida (ECV)**, no GEIH. Se aplica la metodología oficial de déficit habitacional del DANE (2020) con sus criterios de **cabecera municipal**. La réplica reproduce el dato publicado por el DANE: en cabecera nacional 2024 da 17,18 % contra 17,29 % oficial, y los siete componentes coinciden dentro de 0,07 puntos.
 
-Estos indicadores requieren la **Encuesta Nacional de Calidad de Vida (ECV)**, que no forma parte del alcance de esta fase. **No fueron estimados ni aproximados**: cualquier cifra de déficit habitacional atribuida a este observatorio sería incorrecta.
+| Hogares en déficit (%) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Déficit habitacional total | 27.13% | 22.74% | 23.15% | ND |
+| — cuantitativo (estructural) | ~~4.05%~~ 🔴 | ~~4.03%~~ 🔴 | ~~2.82%~~ 🔴 | ND |
+| — cualitativo (subsanable) | 23.08% | 18.71% | 20.32% | ND |
+
+*Las dos categorías son **excluyentes**: un hogar en déficit cuantitativo no se cuenta además en cualitativo, así que total = cuantitativo + cualitativo.*
+
+| Componentes del déficit cualitativo (%) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Hacinamiento mitigable | 16.53% | 14.70% | 15.26% | ND |
+| Lugar inadecuado para cocinar | 4.03% 🟡 | ~~3.17%~~ 🔴 | ~~2.92%~~ 🔴 | ND |
+| Alcantarillado o sanitario inadecuado | ~~2.84%~~ 🔴 | ~~1.06%~~ 🔴 | ~~2.23%~~ 🔴 | ND |
+| Sin acueducto | ~~1.30%~~ 🔴 | ~~0.48%~~ 🔴 | ~~1.13%~~ 🔴 | ND |
+| Sin recolección de basuras | ~~1.21%~~ 🔴 | ~~0.86%~~ 🔴 | ~~2.10%~~ 🔴 | ND |
+
+| Materiales de la vivienda (%) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Paredes en material inadecuado | ~~2.51%~~ 🔴 | ~~2.80%~~ 🔴 | ~~2.17%~~ 🔴 | ND |
+| Pisos de tierra, arena o barro | ~~6.56%~~ 🔴 | ~~5.44%~~ 🔴 | ~~4.51%~~ 🔴 | ND |
+
+| Estrato socioeconómico (% de hogares) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Estrato 1 o 2 | 88.87% | 83.91% | 86.43% | ND |
+| Estrato 3 | ~~6.45%~~ 🔴 | ~~11.33%~~ 🔴 | ~~8.49%~~ 🔴 | ND |
+| Estrato 4, 5 o 6 | ~~4.27%~~ 🔴 | ~~4.76%~~ 🔴 | ~~5.08%~~ 🔴 | ND |
+| Sin estrato o no informa | ~~0.42%~~ 🔴 | 0.00% 🟡 | 0.00% 🟡 | ND |
+
+*El estrato se publica agrupado porque con unos 700 hogares de muestra por ciudad los estratos 4, 5 y 6 por separado no alcanzan precisión utilizable. El estrato es el que reporta el hogar en su factura de energía (`P8520S1A1`).*
+
+**Qué se puede leer por ciudad y qué no.** Con la muestra que la ECV asigna a cada ciudad, el déficit **total**, el **cualitativo**, el hacinamiento y el estrato 1 o 2 se estiman con precisión utilizable. El déficit **cuantitativo** y los componentes poco frecuentes (acueducto, basuras, materiales) quedan casi siempre marcados `NO PUBLICAR`: no es que valgan cero, es que la muestra no permite afirmarlos para una ciudad. A escala nacional sí se estiman bien.
+
+*`2026*` aparece en `ND` porque el DANE aún no publica la ECV 2026; no se extrapola.*
 
 ---
 
@@ -129,6 +157,7 @@ Estos indicadores requieren la **Encuesta Nacional de Calidad de Vida (ECV)**, q
 - **Validación geográfica:** 42 celdas ciudad-mes, 42 en estado `VÁLIDO`. Coincidencia con el departamento esperado: 100.0 %; cabecera municipal (`CLASE=1`): 100.0 %.
 - **Validación poblacional (CNPV 2018):** REVISAR: 3, DENTRO_TOLERANCIA: 1 (de 4 años). Desvío frente a la proyección oficial: -7.6 % a -4.1 %.
   - ⚠️ Esta ciudad presenta desvíos superiores al ±5 % en al menos un año. El cruce geográfico dio 100 %, por lo que el desvío se atribuye a la calibración de `FEX_C18` frente a la versión actualizada de las proyecciones, no a un error de identificación. **Los porcentajes y medianas de esta ficha no se ven afectados; la cautela aplica a los niveles absolutos de población expandida.**
+- 📋 **Sección 7 (déficit, ECV):** 27 estimación(es) marcadas NO PUBLICAR y 3 en PRECAUCIÓN, por el tamaño de la muestra que la ECV asigna a esta ciudad. Están señaladas en las tablas de esa sección; no se enumeran aquí una por una.
 - 🔴 **7 estimación(es) marcadas NO PUBLICAR** (n < 30 o CV > 25 %). Aparecen ~~tachadas~~ en las tablas de arriba y **no deben citarse**:
   - 2023 · Hogares sin energia electrica (CV = 51.5 %)
   - 2023 · Tenencia: Otra (CV = 68.6 %)
@@ -143,10 +172,10 @@ Estos indicadores requieren la **Encuesta Nacional de Calidad de Vida (ECV)**, q
 
 ## 9. Antes de citar estas cifras
 
-1. **El margen de error real es mayor al reportado.** Los microdatos públicos de la GEIH no incluyen variables de diseño muestral (UPM/estrato), así que la varianza se estimó por bootstrap agrupando en `DIRECTORIO` (la vivienda), que captura solo parte del efecto de conglomeración. El error estándar publicado es una **cota inferior**.
+1. **El margen de error de las cifras GEIH es mayor al reportado.** Los microdatos públicos de la GEIH no incluyen variables de diseño muestral (UPM/estrato), así que su varianza se estimó por bootstrap agrupando en `DIRECTORIO` (la vivienda), que captura solo parte del efecto de conglomeración: ese error estándar es una **cota inferior**. No aplica a la sección 7: la ECV sí publica sus variables de diseño, y allí la varianza se estima con el diseño real (estrato y UPM).
 2. **2026 es parcial** (enero–junio). Nunca compare esa cifra contra un año completo sin usar la comparación pareada que aparece en la sección 3.
 3. **No hay datos de ingreso, carga financiera ni pobreza para 2026\*** — el DANE no publica esa medición del año en curso. Los `ND` son estructurales, no un fallo del cálculo.
-4. **El déficit habitacional no está calculado** (sección 7).
+4. **El déficit habitacional viene de otra encuesta** (sección 7): es ECV, no GEIH, y son años completos distintos a la serie GEIH. No mezcle ambas fuentes en una misma serie.
 
 ---
 

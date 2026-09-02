@@ -112,15 +112,43 @@
 
 ---
 
-## 7. Déficit habitacional — **no disponible en esta fase**
+## 7. Déficit habitacional, materiales y estrato
 
-| Indicador | Estado |
-|---|---|
-| Déficit habitacional cuantitativo | `ND — pendiente Fase 2 (ECV)` |
-| Déficit habitacional cualitativo | `ND — pendiente Fase 2 (ECV)` |
-| Distribución por estrato socioeconómico | `ND — pendiente Fase 2 (ECV)` |
+Fuente distinta al resto de la ficha: **Encuesta Nacional de Calidad de Vida (ECV)**, no GEIH. Se aplica la metodología oficial de déficit habitacional del DANE (2020) con sus criterios de **cabecera municipal**. La réplica reproduce el dato publicado por el DANE: en cabecera nacional 2024 da 17,18 % contra 17,29 % oficial, y los siete componentes coinciden dentro de 0,07 puntos.
 
-Estos indicadores requieren la **Encuesta Nacional de Calidad de Vida (ECV)**, que no forma parte del alcance de esta fase. **No fueron estimados ni aproximados**: cualquier cifra de déficit habitacional atribuida a este observatorio sería incorrecta.
+| Hogares en déficit (%) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Déficit habitacional total | ~~7.95%~~ 🔴 | 12.49% 🟡 | ~~10.31%~~ 🔴 | ND |
+| — cuantitativo (estructural) | 0.00% 🟡 | ~~1.79%~~ 🔴 | ~~0.42%~~ 🔴 | ND |
+| — cualitativo (subsanable) | ~~7.95%~~ 🔴 | ~~10.70%~~ 🔴 | ~~9.88%~~ 🔴 | ND |
+
+*Las dos categorías son **excluyentes**: un hogar en déficit cuantitativo no se cuenta además en cualitativo, así que total = cuantitativo + cualitativo.*
+
+| Componentes del déficit cualitativo (%) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Hacinamiento mitigable | ~~5.13%~~ 🔴 | ~~6.70%~~ 🔴 | 4.40% 🟡 | ND |
+| Lugar inadecuado para cocinar | ~~3.11%~~ 🔴 | ~~4.00%~~ 🔴 | ~~3.22%~~ 🔴 | ND |
+| Alcantarillado o sanitario inadecuado | 0.00% 🟡 | 0.00% 🟡 | ~~2.58%~~ 🔴 | ND |
+| Sin acueducto | 0.00% 🟡 | 0.00% 🟡 | 0.00% 🟡 | ND |
+| Sin recolección de basuras | 0.00% 🟡 | 0.00% 🟡 | 0.00% 🟡 | ND |
+
+| Materiales de la vivienda (%) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Paredes en material inadecuado | 0.00% 🟡 | ~~1.23%~~ 🔴 | ~~0.42%~~ 🔴 | ND |
+| Pisos de tierra, arena o barro | ~~0.32%~~ 🔴 | ~~1.39%~~ 🔴 | ~~0.20%~~ 🔴 | ND |
+
+| Estrato socioeconómico (% de hogares) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Estrato 1 o 2 | 61.49% | 66.66% | 62.83% | ND |
+| Estrato 3 | 23.72% 🟡 | 21.36% 🟡 | 27.24% 🟡 | ND |
+| Estrato 4, 5 o 6 | ~~13.50%~~ 🔴 | ~~11.98%~~ 🔴 | ~~9.93%~~ 🔴 | ND |
+| Sin estrato o no informa | ~~1.30%~~ 🔴 | 0.00% 🟡 | 0.00% 🟡 | ND |
+
+*El estrato se publica agrupado porque con unos 700 hogares de muestra por ciudad los estratos 4, 5 y 6 por separado no alcanzan precisión utilizable. El estrato es el que reporta el hogar en su factura de energía (`P8520S1A1`).*
+
+**Qué se puede leer por ciudad y qué no.** Con la muestra que la ECV asigna a cada ciudad, el déficit **total**, el **cualitativo**, el hacinamiento y el estrato 1 o 2 se estiman con precisión utilizable. El déficit **cuantitativo** y los componentes poco frecuentes (acueducto, basuras, materiales) quedan casi siempre marcados `NO PUBLICAR`: no es que valgan cero, es que la muestra no permite afirmarlos para una ciudad. A escala nacional sí se estiman bien.
+
+*`2026*` aparece en `ND` porque el DANE aún no publica la ECV 2026; no se extrapola.*
 
 ---
 
@@ -128,6 +156,7 @@ Estos indicadores requieren la **Encuesta Nacional de Calidad de Vida (ECV)**, q
 
 - **Validación geográfica:** 42 celdas ciudad-mes, 42 en estado `VÁLIDO`. Coincidencia con el departamento esperado: 100.0 %; cabecera municipal (`CLASE=1`): 100.0 %.
 - **Validación poblacional (CNPV 2018):** DENTRO_TOLERANCIA: 4 (de 4 años). Desvío frente a la proyección oficial: -2.5 % a -2.5 %.
+- 📋 **Sección 7 (déficit, ECV):** 22 estimación(es) marcadas NO PUBLICAR y 17 en PRECAUCIÓN, por el tamaño de la muestra que la ECV asigna a esta ciudad. Están señaladas en las tablas de esa sección; no se enumeran aquí una por una.
 - 🔴 **14 estimación(es) marcadas NO PUBLICAR** (n < 30 o CV > 25 %). Aparecen ~~tachadas~~ en las tablas de arriba y **no deben citarse**:
   - 2023 · Hogares sin acueducto (CV = 92.9 %)
   - 2023 · Hogares sin alcantarillado (CV = 38.5 %)
@@ -144,10 +173,10 @@ Estos indicadores requieren la **Encuesta Nacional de Calidad de Vida (ECV)**, q
 
 ## 9. Antes de citar estas cifras
 
-1. **El margen de error real es mayor al reportado.** Los microdatos públicos de la GEIH no incluyen variables de diseño muestral (UPM/estrato), así que la varianza se estimó por bootstrap agrupando en `DIRECTORIO` (la vivienda), que captura solo parte del efecto de conglomeración. El error estándar publicado es una **cota inferior**.
+1. **El margen de error de las cifras GEIH es mayor al reportado.** Los microdatos públicos de la GEIH no incluyen variables de diseño muestral (UPM/estrato), así que su varianza se estimó por bootstrap agrupando en `DIRECTORIO` (la vivienda), que captura solo parte del efecto de conglomeración: ese error estándar es una **cota inferior**. No aplica a la sección 7: la ECV sí publica sus variables de diseño, y allí la varianza se estima con el diseño real (estrato y UPM).
 2. **2026 es parcial** (enero–junio). Nunca compare esa cifra contra un año completo sin usar la comparación pareada que aparece en la sección 3.
 3. **No hay datos de ingreso, carga financiera ni pobreza para 2026\*** — el DANE no publica esa medición del año en curso. Los `ND` son estructurales, no un fallo del cálculo.
-4. **El déficit habitacional no está calculado** (sección 7).
+4. **El déficit habitacional viene de otra encuesta** (sección 7): es ECV, no GEIH, y son años completos distintos a la serie GEIH. No mezcle ambas fuentes en una misma serie.
 
 ---
 

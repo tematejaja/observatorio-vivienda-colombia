@@ -112,15 +112,43 @@
 
 ---
 
-## 7. Déficit habitacional — **no disponible en esta fase**
+## 7. Déficit habitacional, materiales y estrato
 
-| Indicador | Estado |
-|---|---|
-| Déficit habitacional cuantitativo | `ND — pendiente Fase 2 (ECV)` |
-| Déficit habitacional cualitativo | `ND — pendiente Fase 2 (ECV)` |
-| Distribución por estrato socioeconómico | `ND — pendiente Fase 2 (ECV)` |
+Fuente distinta al resto de la ficha: **Encuesta Nacional de Calidad de Vida (ECV)**, no GEIH. Se aplica la metodología oficial de déficit habitacional del DANE (2020) con sus criterios de **cabecera municipal**. La réplica reproduce el dato publicado por el DANE: en cabecera nacional 2024 da 17,18 % contra 17,29 % oficial, y los siete componentes coinciden dentro de 0,07 puntos.
 
-Estos indicadores requieren la **Encuesta Nacional de Calidad de Vida (ECV)**, que no forma parte del alcance de esta fase. **No fueron estimados ni aproximados**: cualquier cifra de déficit habitacional atribuida a este observatorio sería incorrecta.
+| Hogares en déficit (%) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Déficit habitacional total | 8.34% 🟡 | 13.09% 🟡 | 10.96% 🟡 | ND |
+| — cuantitativo (estructural) | ~~2.75%~~ 🔴 | ~~4.25%~~ 🔴 | ~~1.42%~~ 🔴 | ND |
+| — cualitativo (subsanable) | 5.59% 🟡 | 8.84% 🟡 | 9.54% 🟡 | ND |
+
+*Las dos categorías son **excluyentes**: un hogar en déficit cuantitativo no se cuenta además en cualitativo, así que total = cuantitativo + cualitativo.*
+
+| Componentes del déficit cualitativo (%) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Hacinamiento mitigable | 3.94% 🟡 | 5.96% 🟡 | 6.05% 🟡 | ND |
+| Lugar inadecuado para cocinar | ~~1.04%~~ 🔴 | ~~4.07%~~ 🔴 | ~~0.83%~~ 🔴 | ND |
+| Alcantarillado o sanitario inadecuado | ~~0.53%~~ 🔴 | ~~0.17%~~ 🔴 | ~~2.95%~~ 🔴 | ND |
+| Sin acueducto | 0.00% 🟡 | 0.00% 🟡 | ~~1.10%~~ 🔴 | ND |
+| Sin recolección de basuras | ~~0.45%~~ 🔴 | ~~0.35%~~ 🔴 | ~~2.69%~~ 🔴 | ND |
+
+| Materiales de la vivienda (%) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Paredes en material inadecuado | ~~2.56%~~ 🔴 | ~~3.63%~~ 🔴 | ~~1.23%~~ 🔴 | ND |
+| Pisos de tierra, arena o barro | 0.00% 🟡 | ~~0.57%~~ 🔴 | ~~0.50%~~ 🔴 | ND |
+
+| Estrato socioeconómico (% de hogares) | 2023 | 2024 | 2025 | 2026* |
+|---|---|---|---|---|
+| Estrato 1 o 2 | 46.06% | 47.75% | 47.13% | ND |
+| Estrato 3 | 33.06% 🟡 | 32.05% 🟡 | 32.75% 🟡 | ND |
+| Estrato 4, 5 o 6 | 20.60% 🟡 | 19.97% 🟡 | 19.27% 🟡 | ND |
+| Sin estrato o no informa | ~~0.27%~~ 🔴 | ~~0.23%~~ 🔴 | ~~0.85%~~ 🔴 | ND |
+
+*El estrato se publica agrupado porque con unos 700 hogares de muestra por ciudad los estratos 4, 5 y 6 por separado no alcanzan precisión utilizable. El estrato es el que reporta el hogar en su factura de energía (`P8520S1A1`).*
+
+**Qué se puede leer por ciudad y qué no.** Con la muestra que la ECV asigna a cada ciudad, el déficit **total**, el **cualitativo**, el hacinamiento y el estrato 1 o 2 se estiman con precisión utilizable. El déficit **cuantitativo** y los componentes poco frecuentes (acueducto, basuras, materiales) quedan casi siempre marcados `NO PUBLICAR`: no es que valgan cero, es que la muestra no permite afirmarlos para una ciudad. A escala nacional sí se estiman bien.
+
+*`2026*` aparece en `ND` porque el DANE aún no publica la ECV 2026; no se extrapola.*
 
 ---
 
@@ -129,6 +157,7 @@ Estos indicadores requieren la **Encuesta Nacional de Calidad de Vida (ECV)**, q
 - **Validación geográfica:** 42 celdas ciudad-mes, 42 en estado `VÁLIDO`. Coincidencia con el departamento esperado: 100.0 %; cabecera municipal (`CLASE=1`): 100.0 %.
 - **Validación poblacional (CNPV 2018):** REVISAR: 3, DENTRO_TOLERANCIA: 1 (de 4 años). Desvío frente a la proyección oficial: +4.3 % a +6.9 %.
   - ⚠️ Esta ciudad presenta desvíos superiores al ±5 % en al menos un año. El cruce geográfico dio 100 %, por lo que el desvío se atribuye a la calibración de `FEX_C18` frente a la versión actualizada de las proyecciones, no a un error de identificación. **Los porcentajes y medianas de esta ficha no se ven afectados; la cautela aplica a los niveles absolutos de población expandida.**
+- 📋 **Sección 7 (déficit, ECV):** 21 estimación(es) marcadas NO PUBLICAR y 18 en PRECAUCIÓN, por el tamaño de la muestra que la ECV asigna a esta ciudad. Están señaladas en las tablas de esa sección; no se enumeran aquí una por una.
 - 🔴 **16 estimación(es) marcadas NO PUBLICAR** (n < 30 o CV > 25 %). Aparecen ~~tachadas~~ en las tablas de arriba y **no deben citarse**:
   - 2023 · Hogares con hacinamiento critico NBI (>3 personas/cuarto TOTAL)
   - 2023 · Hogares sin acueducto (CV = 26.3 %)
@@ -145,10 +174,10 @@ Estos indicadores requieren la **Encuesta Nacional de Calidad de Vida (ECV)**, q
 
 ## 9. Antes de citar estas cifras
 
-1. **El margen de error real es mayor al reportado.** Los microdatos públicos de la GEIH no incluyen variables de diseño muestral (UPM/estrato), así que la varianza se estimó por bootstrap agrupando en `DIRECTORIO` (la vivienda), que captura solo parte del efecto de conglomeración. El error estándar publicado es una **cota inferior**.
+1. **El margen de error de las cifras GEIH es mayor al reportado.** Los microdatos públicos de la GEIH no incluyen variables de diseño muestral (UPM/estrato), así que su varianza se estimó por bootstrap agrupando en `DIRECTORIO` (la vivienda), que captura solo parte del efecto de conglomeración: ese error estándar es una **cota inferior**. No aplica a la sección 7: la ECV sí publica sus variables de diseño, y allí la varianza se estima con el diseño real (estrato y UPM).
 2. **2026 es parcial** (enero–junio). Nunca compare esa cifra contra un año completo sin usar la comparación pareada que aparece en la sección 3.
 3. **No hay datos de ingreso, carga financiera ni pobreza para 2026\*** — el DANE no publica esa medición del año en curso. Los `ND` son estructurales, no un fallo del cálculo.
-4. **El déficit habitacional no está calculado** (sección 7).
+4. **El déficit habitacional viene de otra encuesta** (sección 7): es ECV, no GEIH, y son años completos distintos a la serie GEIH. No mezcle ambas fuentes en una misma serie.
 
 ---
 

@@ -8,29 +8,70 @@
 
 > **Antes de citar cualquier cifra de este observatorio, lea la sección 8
 > (Limitaciones declaradas).** Contiene tres restricciones que cambian cómo debe
-> interpretarse el dato: la varianza de diseño complejo es una cota inferior, el
-> déficit habitacional no está calculado en esta fase, y no existe medición de
-> pobreza monetaria para 2026.
+> interpretarse el dato: la varianza de las cifras GEIH es una cota inferior, el
+> déficit habitacional proviene de otra encuesta (ECV) y no debe encadenarse con la
+> serie GEIH, y no existe medición de pobreza monetaria para 2026.
 
 ---
 
-## 1. Alcance y qué NO incluye esta fase
+## 1. Alcance y qué NO incluye
 
-Esta Fase 1 cubre únicamente los indicadores derivables de la **Gran Encuesta
-Integrada de Hogares (GEIH)** y de la **base de Pobreza Monetaria y Desigualdad**
-del DANE.
+El grueso del observatorio se deriva de la **Gran Encuesta Integrada de Hogares
+(GEIH)** y de la **base de Pobreza Monetaria y Desigualdad** del DANE (Fase 1).
+El bloque de **déficit habitacional, materiales y estrato** se agregó después
+(Fase 2) y viene de una fuente distinta: la **Encuesta Nacional de Calidad de
+Vida (ECV)**, años 2023, 2024 y 2025.
 
-**Explícitamente fuera de alcance (no estimado, no aproximado, marcado `ND`):**
+**Las dos fuentes no se mezclan.** Son encuestas distintas, con muestras,
+períodos y diseños distintos. Encadenar una cifra GEIH con una ECV en la misma
+serie sería incorrecto, y por eso el déficit vive en su propio bloque.
+
+**Lo que sigue marcado `ND` (no estimado, no aproximado):**
 
 | Indicador | Estado | Razón |
 |---|---|---|
-| Déficit habitacional cuantitativo | `ND — pendiente Fase 2 (ECV)` | Requiere la Encuesta de Calidad de Vida |
-| Déficit habitacional cualitativo | `ND — pendiente Fase 2 (ECV)` | Requiere la Encuesta de Calidad de Vida |
-| Distribución por estrato socioeconómico | `ND — pendiente Fase 2 (ECV)` | Requiere la Encuesta de Calidad de Vida |
+| Déficit habitacional 2026 | `ND` | El DANE aún no publica la ECV 2026 |
 | Ingreso, carga financiera y pobreza 2026 | `ND` | El DANE no publica Pobreza Monetaria del año en curso |
 
 Estas celdas existen en el esquema del CSV y del Excel, pero **nunca contienen un
 número estimado**. No se extrapolaron desde años anteriores ni desde otras ciudades.
+
+### Déficit habitacional: qué se replicó y qué se puede leer por ciudad
+
+Se aplica la **metodología oficial de déficit habitacional del DANE (2020)** con
+sus criterios de cabecera municipal, que es la condición de las 23 ciudades. La
+réplica se validó contra el anexo oficial de la ECV antes de desagregar:
+
+| Control (2024, cabecera nacional) | Calculado | DANE |
+|---|---|---|
+| Déficit habitacional total | 17,18 % | 17,29 % |
+| — cuantitativo | 2,61 % | 2,80 % |
+| — cualitativo | 14,57 % | 14,49 % |
+
+Los siete componentes del déficit cualitativo coinciden dentro de 0,07 puntos, y
+lo mismo ocurre en 2023 y 2025. Como control adicional a nivel de ciudad se usa
+**Bogotá D.C.**, el único caso en que el DANE publica una cifra comparable: la
+réplica da 10,96 / 6,93 / 6,19 % frente a 11,01 / 7,07 / 6,19 % oficiales.
+
+A diferencia de la GEIH, la ECV **sí publica sus variables de diseño muestral**
+(estrato y UPM), de modo que en este bloque la varianza se estima por
+linealización de Taylor con el diseño real, y no por el bootstrap aproximado que
+usa el resto del observatorio.
+
+**Qué aguanta lectura por ciudad.** Con la muestra que la ECV asigna a cada
+ciudad (entre 434 y 1.866 hogares), el déficit **total**, el **cualitativo**, el
+hacinamiento mitigable y el estrato 1 o 2 se estiman con precisión utilizable. El
+déficit **cuantitativo** y los componentes poco frecuentes —acueducto, basuras,
+materiales— quedan marcados `NO PUBLICAR` en casi todas las ciudades: no valen
+cero, es que la muestra no permite afirmarlos para una ciudad. A escala nacional
+sí se estiman bien.
+
+**Lo que no se reprodujo, y por qué.** El déficit del total nacional y del
+agregado rural no se replica (29,74 % contra 26,84 % en 2024). La ECV publica la
+variable `CLASE` con solo dos valores —cabecera y resto— mientras que la
+metodología del DANE aplica reglas distintas a centros poblados y a rural
+disperso. Sin poder separarlos, el resto queda sobreestimado. No afecta a este
+observatorio: las 23 ciudades son todas cabecera, y ahí la réplica es exacta.
 
 ---
 

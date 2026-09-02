@@ -46,7 +46,6 @@ RANKINGS = [
 
 # bloque_indicador que nunca tiene valor en esta fase (FR-013) - se excluye de
 # los selectores interactivos (Comparador) en vez de dejarlo elegible-pero-vacio.
-BLOQUE_SIN_DATOS_FASE1 = "deficit_habitacional"
 
 # Puente entre el nombre_indicador del CSV maestro y el nombre mas corto que usa
 # validacion_temporal_nacional.csv (los dos archivos nombran el mismo indicador
@@ -129,18 +128,19 @@ def cargar_auditoria() -> pd.DataFrame:
 
 def indicadores_disponibles(
     tabla: pd.DataFrame | None = None,
-    incluir_deficit: bool = False,
     incluir_controles: bool = False,
 ):
     """Catalogo (bloque_indicador, nombre_indicador) presente en la tabla
     maestra, en el orden en que aparecen las columnas.
 
-    Por defecto excluye dos cosas que no son indicadores publicables:
-      * `deficit_habitacional`, siempre ND en esta fase (FR-013), para no
-        ofrecer en un selector algo que nunca tiene valor.
-      * las filas de control de auditoria (`... (control)`, p. ej. la suma de
-        categorias de tenencia, que debe dar 100 %): son un chequeo interno,
-        no una cifra que alguien quiera graficar.
+    Incluye el bloque `deficit_habitacional`. Hasta la Fase 1 se excluia por
+    defecto porque estaba siempre en ND; desde que la Fase 2 lo calculo con la
+    ECV tiene valores reales y ocultarlo dejaria fuera de los selectores el
+    unico bloque cuya varianza esta estimada con el diseno muestral real.
+
+    Lo unico que se excluye por defecto son las filas de control de auditoria
+    (`... (control)`, p. ej. la suma de categorias de tenencia, que debe dar
+    100 %): son un chequeo interno, no una cifra que alguien quiera graficar.
     """
     if tabla is None:
         tabla = cargar_tabla_maestra()
@@ -149,8 +149,6 @@ def indicadores_disponibles(
         .drop_duplicates()
         .itertuples(index=False, name=None)
     )
-    if not incluir_deficit:
-        pares = [p for p in pares if p[0] != BLOQUE_SIN_DATOS_FASE1]
     if not incluir_controles:
         pares = [p for p in pares if "(control)" not in p[1]]
     return pares

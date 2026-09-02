@@ -41,8 +41,9 @@ AUTOR_CORREO = "nicolasalvarezbernal@gmail.com"
 
 FUENTES = (
     "Fuentes: DANE. Gran Encuesta Integrada de Hogares 2023–2026 (catálogos ANDA 782, 819, 853 "
-    "y 900) y Medición de Pobreza Monetaria y Desigualdad 2023–2025 (835, 874 y 908). "
-    "Proyecciones de población CNPV 2018."
+    "y 900); Medición de Pobreza Monetaria y Desigualdad 2023–2025 (835, 874 y 908); Encuesta "
+    "Nacional de Calidad de Vida 2023–2025 (827, 861 y 905), de donde sale el déficit "
+    "habitacional. Proyecciones de población CNPV 2018."
 )
 
 MARCA = Path(__file__).resolve().parent.parent / "assets" / "marca.svg"

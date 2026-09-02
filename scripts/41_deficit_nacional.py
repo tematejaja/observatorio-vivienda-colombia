@@ -26,9 +26,12 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 from config_ciudades import stdout_utf8
 import config_deficit as cfg
+import anexo_ecv
 
 BASE_DIR = SCRIPTS_DIR.parent
 ECV_DIR = BASE_DIR / "GEIH" / "ECV"
+
+ANIOS = (2023, 2024, 2025)
 
 # Variables del modulo "Servicios del hogar", identificadas contra el formulario
 # ECV 2024 (cap. C) y confirmadas por calibracion contra el anexo oficial.
@@ -56,7 +59,19 @@ def _csv(nombre: str) -> pd.DataFrame:
 
 
 def num(s: pd.Series) -> pd.Series:
-    return pd.to_numeric(s, errors="coerce")
+    """Convierte a numero tolerando la COMA DECIMAL.
+
+    El DANE cambio el formato: la ECV 2023 y 2024 publican el factor de
+    expansion como '651.29886571' y la de 2025 como '472,1319014'. Con
+    `pd.to_numeric` a secas, 2025 daba NaN en TODOS los pesos y el calculo
+    entero salia vacio sin lanzar ningun error. Solo se reemplaza la coma
+    cuando el valor es exactamente digitos,digitos, para no tocar por accidente
+    un separador de miles.
+    """
+    t = s.astype(str).str.strip()
+    decimal_coma = t.str.fullmatch(r"-?\d+,\d+", na=False)
+    t = t.where(~decimal_coma, t.str.replace(",", ".", regex=False))
+    return pd.to_numeric(t, errors="coerce")
 
 
 def construir(anio: int) -> pd.DataFrame:
@@ -68,7 +83,8 @@ def construir(anio: int) -> pd.DataFrame:
     cols_viv = ["DIRECTORIO", "CLASE", cfg.VAR_TIPO_VIVIENDA, cfg.VAR_PAREDES,
                 cfg.VAR_PISOS, cfg.VAR_ENERGIA, cfg.VAR_ACUEDUCTO,
                 cfg.VAR_ALCANTARILLADO, cfg.VAR_BASURAS,
-                cfg.VAR_HOGARES_EN_VIVIENDA, "P1_DEPARTAMENTO", "P1_MUNICIPIO"]
+                cfg.VAR_HOGARES_EN_VIVIENDA, cfg.VAR_ESTRATO,
+                "P1_DEPARTAMENTO", "P1_MUNICIPIO"]
     cols_ser = ["DIRECTORIO", "SECUENCIA_P", "FEX_C", cfg.VAR_CUARTOS_DORMIR,
                 cfg.VAR_PERSONAS_HOGAR, VAR_SANITARIO, VAR_COCINA]
 
@@ -76,6 +92,15 @@ def construir(anio: int) -> pd.DataFrame:
     for c in h.columns:
         if c != "DIRECTORIO":
             h[c] = num(h[c])
+
+    # Guarda contra fallos silenciosos de parseo: si el factor de expansion no
+    # se leyo bien, todo lo que sigue da cero o vacio sin lanzar error. Colombia
+    # tiene del orden de 18 millones de hogares.
+    hogares = h["FEX_C"].sum()
+    if not (12e6 < hogares < 25e6):
+        raise RuntimeError(
+            f"{anio}: FEX_C suma {hogares:,.0f} hogares, fuera del rango creible "
+            f"(12-25 millones). Revisar el formato numerico del modulo.")
 
     h["_personas_vivienda"] = h.groupby("DIRECTORIO")[cfg.VAR_PERSONAS_HOGAR].transform("sum")
     h["_personas_cuarto"] = h[cfg.VAR_PERSONAS_HOGAR] / h[cfg.VAR_CUARTOS_DORMIR]
@@ -137,55 +162,59 @@ def pct(d: pd.DataFrame, mascara, filtro=None) -> float:
 
 def main() -> None:
     stdout_utf8()
-    print("FASE 2 · Paso 1 — déficit habitacional, validación contra el anexo oficial")
+    print("FASE 2 - Paso 1: deficit habitacional, validacion contra el anexo oficial")
     print("=" * 78)
 
-    for anio in (2023, 2024):
+    COMPONENTES = [
+        ("  comp. hacinamiento mitigable", "q_hacin", "hacinamiento_mitigable"),
+        ("  comp. material de pisos", "q_piso", "pisos"),
+        ("  comp. lugar donde cocina", "q_cocina", "cocina"),
+        ("  comp. agua para cocinar", "q_agua", "agua"),
+        ("  comp. alcantarillado", "q_alcan", "alcantarillado"),
+        ("  comp. energia electrica", "q_energia", "energia"),
+        ("  comp. recoleccion basuras", "q_basura", "basuras"),
+    ]
+
+    for anio in ANIOS:
         d = calcular(construir(anio))
         cab = d["CLASE"] == 1
-        o = cfg.VALIDACION_OFICIAL.get(anio, {})
+        of = anexo_ecv.leer(ECV_DIR / f"anex-ECV-{anio}.xlsx")
+        o_cab = of.loc[("Total nacional", "Cabecera")]
+        o_nac = of.loc[("Total nacional", "Total")]
 
-        def linea(etiqueta, calc, clave, tol=0.5):
-            of = o.get(clave)
-            if of is None:
-                print(f"  {etiqueta:<34}{calc:>9.2f}%{'—':>10}")
+        def linea(etiqueta, calc, oficial, tol=0.5):
+            if oficial is None or pd.isna(oficial):
+                print(f"  {etiqueta:<34}{calc:>9.2f}%{'--':>10}")
                 return
-            dif = calc - of
+            dif = calc - float(oficial)
             marca = "OK" if abs(dif) <= tol else ("~" if abs(dif) <= 1.5 else "XX")
-            print(f"  {etiqueta:<34}{calc:>9.2f}%{of:>8.2f}%{dif:>+8.2f}  {marca}")
+            print(f"  {etiqueta:<34}{calc:>9.2f}%{float(oficial):>8.2f}%{dif:>+8.2f}  {marca}")
 
         print("")
         print("-" * 78)
-        print(f"{anio}   ({len(d):,} hogares · "
-              f"{int(d['_excluido'].sum()):,} excluidos por vivienda indígena)")
+        print(f"{anio}   ({len(d):,} hogares, {int(d['_excluido'].sum()):,} excluidos "
+              f"por vivienda indigena)")
         print(f"  {'indicador':<34}{'calculado':>10}{'DANE':>9}{'dif':>8}")
 
-        linea("CABECERA · déficit total", pct(d, d["deficit"], cab), "total_cabecera")
-        linea("CABECERA · cuantitativo", pct(d, d["cuantitativo"], cab), "cuantitativo_cabecera")
-        linea("CABECERA · cualitativo", pct(d, d["cualitativo"], cab), "cualitativo_cabecera")
+        linea("CABECERA - deficit total", pct(d, d["deficit"], cab), o_cab["total"])
+        linea("CABECERA - cuantitativo", pct(d, d["cuantitativo"], cab), o_cab["cuantitativo"])
+        linea("CABECERA - cualitativo", pct(d, d["cualitativo"], cab), o_cab["cualitativo"])
         print("  " + "-" * 58)
-        for etiq, col, clave in [
-            ("  comp. hacinamiento mitigable", "q_hacin", "cab_hacinamiento_mitigable"),
-            ("  comp. material de pisos", "q_piso", "cab_pisos"),
-            ("  comp. lugar donde cocina", "q_cocina", "cab_cocina"),
-            ("  comp. agua para cocinar", "q_agua", "cab_agua"),
-            ("  comp. alcantarillado", "q_alcan", "cab_alcantarillado"),
-            ("  comp. energía eléctrica", "q_energia", "cab_energia"),
-            ("  comp. recolección basuras", "q_basura", "cab_basuras"),
-        ]:
-            linea(etiq, pct(d, d[col], cab), clave, tol=0.3)
+        for etiq, col, clave in COMPONENTES:
+            linea(etiq, pct(d, d[col], cab), o_cab[clave], tol=0.3)
         print("  " + "-" * 58)
-        linea("NACIONAL · déficit total", pct(d, d["deficit"]), "total_nacional")
-        linea("NACIONAL · cuantitativo", pct(d, d["cuantitativo"]), "cuantitativo_nacional")
-        linea("RESTO · déficit total", pct(d, d["deficit"], ~cab), "total_resto")
+        linea("NACIONAL - deficit total", pct(d, d["deficit"]), o_nac["total"])
+        linea("NACIONAL - cuantitativo", pct(d, d["cuantitativo"]), o_nac["cuantitativo"])
+        linea("RESTO - deficit total", pct(d, d["deficit"], ~cab),
+              of.loc[("Total nacional", "Centros poblados y rural disperso")]["total"])
 
     print("")
     print("=" * 78)
     print("El bloque RESTO no se puede reproducir, y no se pretende: la ECV publica CLASE")
-    print("con solo dos valores (1=cabecera, 2=resto), mientras que la metodología del")
+    print("con solo dos valores (1=cabecera, 2=resto), mientras que la metodologia del")
     print("DANE aplica reglas distintas a centros poblados y a rural disperso (basuras")
     print("solo en centros poblados; hacinamiento no mitigable excluido en rural")
-    print("disperso). Sin esa distinción el resto queda sobreestimado, y con él el total")
+    print("disperso). Sin esa distincion el resto queda sobreestimado, y con el el total")
     print("nacional. No afecta al observatorio: las 23 ciudades son todas cabecera.")
 
 

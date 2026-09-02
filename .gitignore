@@ -31,6 +31,9 @@
 !scripts/config_deficit.py
 !scripts/40_ecv_viabilidad.py
 !scripts/41_deficit_nacional.py
+!scripts/42_deficit_ciudades.py
+!scripts/43_integrar_deficit.py
+!scripts/anexo_ecv.py
 
 !docs/
 !docs/adr/
@@ -50,6 +53,7 @@
 !GEIH/procesado_nacional/validacion_temporal_nacional.csv
 !GEIH/procesado_nacional/auditoria_red_team_nacional.csv
 !GEIH/procesado_nacional/ecv_viabilidad_23ciudades.csv
+!GEIH/procesado_nacional/deficit_23ciudades.csv
 
 !fichas_ciudades/
 !fichas_ciudades/*.md
